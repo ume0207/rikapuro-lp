@@ -63,7 +63,6 @@
   .on .lead{color:rgba(255,255,255,.92)}
   .tsh{text-shadow:var(--tsh)}
   .cen{text-align:center}
-  .mega{font-family:var(--f-display);text-transform:uppercase;line-height:.92;letter-spacing:.01em}
 
   /* ===== buttons ===== */
   .cta-box{width:100%;max-width:448px;margin:0 auto}
@@ -113,14 +112,6 @@
     letter-spacing:.04em;margin:16px 0 6px;text-shadow:var(--tsh)}
   .hero .sub{font-size:12.5px;color:rgba(255,255,255,.92);line-height:1.8;margin-bottom:24px;text-shadow:var(--tsh)}
 
-  /* ===== STATEMENT ===== */
-  .statement{background:var(--cream);text-align:center}
-  .statement .mega{font-size:44px;background:linear-gradient(180deg,#FF9D1C,#E0760A);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-  .statement .mega.l2{font-size:33px;color:var(--ink);-webkit-text-fill-color:initial;background:none;margin-top:1px}
-  .statement h2.h{margin-top:16px}
-  .statement .rule{width:40px;height:4px;background:var(--orange);margin:18px auto 0;border-radius:3px}
-
   /* ===== explanation over image ===== */
   .shot{min-height:66vh;display:flex;align-items:flex-end}
   .shot.cc{align-items:center}
@@ -145,6 +136,33 @@
   .reco-list li .ck{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#FFA92E,#E0760A);color:#fff;
     display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:1px;box-shadow:0 4px 10px rgba(217,112,10,.45)}
   .reco-list li b{color:var(--yellow);font-weight:900}
+  /* 教育リスト（画像上・番号付き） */
+  .edu-list{margin-top:16px}
+  .edu-list li{list-style:none;padding:14px 0;border-top:1px solid rgba(255,255,255,.26)}
+  .edu-list li:last-child{border-bottom:1px solid rgba(255,255,255,.26)}
+  .edu-list .row{display:flex;align-items:flex-start;gap:14px}
+  .edu-list .no{font-family:var(--f-num);font-weight:800;font-size:23px;color:var(--yellow);line-height:1.15;width:34px;flex:none;text-shadow:var(--tsh)}
+  .edu-list h4{font-family:var(--f-head);font-weight:900;font-size:15px;color:#fff;line-height:1.5;text-shadow:var(--tsh)}
+  .edu-list p{font-size:12px;color:rgba(255,255,255,.9);line-height:1.85;margin-top:4px;text-shadow:var(--tsh)}
+  .bridge2{margin-top:24px;font-family:var(--f-head);font-weight:900;font-size:16.5px;color:#fff;text-align:center;line-height:1.7;text-shadow:var(--tsh)}
+  .bridge2 .o{color:var(--yellow)}
+  /* ファクトピル（画像上） */
+  .facts{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .facts span{font-family:var(--f-head);font-weight:700;font-size:11px;letter-spacing:.03em;color:#fff;
+    border:1.5px solid rgba(255,197,61,.7);padding:6px 13px;border-radius:999px;white-space:nowrap;
+    text-shadow:var(--tsh);background:rgba(120,58,2,.22);backdrop-filter:blur(2px)}
+  /* 成分行（画像上） */
+  .sup{margin-top:14px}
+  .sup .srow{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.26)}
+  .sup .srow:last-child{border-bottom:1px solid rgba(255,255,255,.26)}
+  .sup .t{font-family:var(--f-head);font-weight:900;font-size:15px;color:#fff;text-shadow:var(--tsh)}
+  .sup .d{font-size:11.5px;color:rgba(255,255,255,.88);margin-top:3px;line-height:1.7;text-shadow:var(--tsh)}
+  .sup .sv{font-family:var(--f-num);font-weight:800;font-size:25px;color:var(--yellow);white-space:nowrap;text-shadow:var(--tsh)}
+  .sup .sv small{font-family:var(--f-head);font-weight:700;font-size:11px;margin-left:1px}
+  /* タイミングピル（明セクション用） */
+  .timing{display:flex;gap:8px;margin-top:20px;justify-content:center;flex-wrap:wrap}
+  .timing span{font-family:var(--f-head);font-weight:700;font-size:12px;color:var(--orange-deep);
+    border:1.5px solid var(--orange);border-radius:999px;padding:7px 14px;white-space:nowrap;background:#fff}
 
   /* ===== FORMULA (light) ===== */
   .formula-sec{background-color:var(--cream)}
@@ -236,7 +254,7 @@
 
   @media (max-width:380px){
     .fx-in{padding-left:20px;padding-right:20px}
-    .hero h1{font-size:35px}.statement .mega{font-size:38px}.statement .mega.l2{font-size:29px}
+    .hero h1{font-size:35px}
     .price .pp .big{font-size:64px}.ing .r{font-size:32px}.shot h3{font-size:23px}
   }
 </style>
@@ -281,22 +299,27 @@
     </div>
   </section>
 
-  <!-- ===== STATEMENT ===== -->
-  <section class="statement fx-in" style="padding-top:54px;padding-bottom:54px">
-    <div class="rv">
-      <div class="mega">BUILD &amp;</div>
-      <div class="mega l2">RECOVER</div>
-      <h2 class="h">動いたぶん、<br><span class="o">ちゃんと立て直す。</span></h2>
-      <div class="rule"></div>
-    </div>
-  </section>
-
   <!-- ===== PROBLEM (説明 over image) ===== -->
   <section class="fx shot sc-btm" style="background-image:url('team.png');background-position:center 16%">
     <div class="fx-in rv">
       <div class="cap-en">Still tired?</div>
       <h3>その疲れ、<span class="o">持ち越していませんか。</span></h3>
       <p class="desc">ハードに動いた翌日、体が重い。寝てもすっきりしない。──それは、使ったぶんの<b>“材料”が足りていない</b>サインかもしれません。鍛えることも、立て直すことも、必要な栄養があってこそ。</p>
+    </div>
+  </section>
+
+  <!-- ===== 教育: なぜ疲れは抜けないのか ===== -->
+  <section class="fx shot sc-full" style="background-image:url('players-drink.png');background-position:center 22%">
+    <div class="fx-in rv">
+      <div class="cap-en">Why so tired?</div>
+      <h3>なぜ、疲れは<span class="o">抜けないのか。</span></h3>
+      <p class="desc">原因は「気合い」ではなく、<b>栄養</b>かもしれません。動いたあとの体の中では、こんなことが起きています。</p>
+      <ul class="edu-list">
+        <li><div class="row"><span class="no">01</span><div><h4>エネルギーを使い切ったまま</h4><p>動くほど、体に蓄えたエネルギー源は減っていきます。空のまま次の日を迎えると、力を出しきれません。</p></div></div></li>
+        <li><div class="row"><span class="no">02</span><div><h4>汗と一緒に、材料が流れ出る</h4><p>ビタミンやミネラルは汗とともに失われます。エネルギーを“回す”材料が足りないと、立て直しは遅れがちに。</p></div></div></li>
+        <li><div class="row"><span class="no">03</span><div><h4>ハードな日ほど、アミノ酸が減る</h4><p>体内にもっとも多いアミノ酸「グルタミン」は、負荷の大きい日ほど消費されやすいといわれています。</p></div></div></li>
+      </ul>
+      <p class="bridge2">だから──使ったぶんは、<br><span class="o">その日のうちに補う。</span></p>
     </div>
   </section>
 
@@ -327,28 +350,43 @@
     </div>
   </section>
 
-  <!-- ===== BUILD（筋力アップ）説明 over image ===== -->
-  <section class="fx shot sc-btm" style="background-image:url('celebrate.png');background-position:center 24%">
+  <!-- ===== 成分教育1: クエン酸 ===== -->
+  <section class="fx shot sc-full" style="background-image:url('gen-hero-supplement.png');background-position:center 30%">
     <div class="fx-in rv">
-      <div class="cap-en">Build</div>
-      <h3>「筋力アップ」を、<span class="o">土台から。</span></h3>
-      <p class="desc">体づくりの材料となる<b>タンパク質</b>と、体内に多いアミノ酸<b>L-グルタミン</b>。鍛える毎日のコンディションを、栄養面からしっかり支えます。</p>
-      <div class="amts">
-        <div class="a"><div class="n">5<small>g</small></div><div class="k">タンパク質</div></div>
-        <div class="a"><div class="n">5,040<small>mg</small></div><div class="k">L-グルタミン</div></div>
-      </div>
+      <div class="cap-en">Citric Acid</div>
+      <h3>クエン酸<span class="o">4,200mg</span>は、<br>レモン約1個分。</h3>
+      <p class="desc">体の中には、食べたものをエネルギーに変える<b>「クエン酸回路」</b>という仕組みがあります。クエン酸は、その名前の由来になった成分。回路を回す材料として、運動後のすっきりした毎日を支えます。</p>
+      <p class="desc" style="margin-top:9px">さらに、カルシウムや鉄などの<b>ミネラルを吸収しやすくする働き</b>（キレート作用）でも知られる、リカバリーの主役です。</p>
+      <div class="facts"><span>1杯で4,200mg</span><span>レモン約1個分</span><span>爽やかな酸味の正体</span></div>
     </div>
   </section>
 
-  <!-- ===== RECOVER（疲労回復）説明 over image ===== -->
-  <section class="fx shot sc-btm" style="background-image:url('players-drink.png');background-position:center 22%">
+  <!-- ===== 成分教育2: L-グルタミン ===== -->
+  <section class="fx shot sc-full" style="background-image:url('player-shaker.png');background-position:center 18%">
     <div class="fx-in rv">
-      <div class="cap-en">Recover</div>
-      <h3>「疲労回復」を、<span class="o">その日のうちに。</span></h3>
-      <p class="desc"><b>クエン酸4,200mg</b>が運動後のすっきりをサポート。<b>L-グルタミン</b>が立て直しの土台に。爽やかな柑橘系で、ハードに動いた後でもごくごく飲めます。</p>
-      <div class="amts">
-        <div class="a"><div class="n">4,200<small>mg</small></div><div class="k">クエン酸</div></div>
-        <div class="a"><div class="n">82<small>kcal</small></div><div class="k">1杯あたり</div></div>
+      <div class="cap-en">L-Glutamine</div>
+      <h3>体にいちばん多いアミノ酸、<br><span class="o">グルタミン。</span></h3>
+      <p class="desc">筋肉や体内にもっとも多く存在するアミノ酸。ふだんは体の中で作られますが、<b>ハードな運動や忙しい毎日が続くと消費が増え</b>、食事だけでは追いつかないことも。</p>
+      <p class="desc" style="margin-top:9px">だから、動く人ほど意識して補いたい。Recovery Proは1杯で<b>5,040mg</b>。毎日のコンディションの土台を支えます。</p>
+      <div class="facts"><span>1杯で5,040mg</span><span>体内最多のアミノ酸</span><span>動く日ほど消費</span></div>
+    </div>
+  </section>
+
+  <!-- ===== 成分教育3: 支える材料 ===== -->
+  <section class="fx shot sc-full" style="background-image:url('product-turf.png');background-position:center 72%">
+    <div class="fx-in rv">
+      <div class="cap-en">And more</div>
+      <h3>支える材料も、<span class="o">この一袋に。</span></h3>
+      <p class="desc">主役の2成分だけではありません。動く毎日に必要な栄養を、まとめて設計しています。</p>
+      <div class="sup">
+        <div class="srow"><div><div class="t">タンパク質</div><div class="d">体づくりの材料を、ドリンクで手軽に。</div></div><div class="sv">5<small>g</small></div></div>
+        <div class="srow"><div><div class="t">マルトデキストリン</div><div class="d">すばやくエネルギーに変わる糖質。動いた直後の補給に。</div></div><div class="sv">約11<small>g</small></div></div>
+        <div class="srow"><div><div class="t">ビタミン</div><div class="d">B群・C・Dほか。栄養を“回す”ための名脇役。</div></div><div class="sv">11<small>種</small></div></div>
+      </div>
+      <div style="margin-top:26px">
+        <a class="cta" href="https://mealpower.base.shop/items/139813936">
+          <span>初回 <span class="pr">¥3,999</span> で試してみる</span><span class="arw">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -378,12 +416,13 @@
         <div class="stp"><div class="n">2</div><div class="t">溶かす</div><div class="d">水150〜200ml</div></div>
         <div class="stp"><div class="n">3</div><div class="t">飲む</div><div class="d">1日1杯</div></div>
       </div>
-      <p class="hownote rv">運動の前後や、就寝前に。しっかり動いた日や、疲れを感じた日の習慣として取り入れてください。中学生以下は半量、乳幼児はお控えください。</p>
+      <div class="timing rv"><span>運動後30分以内</span><span>就寝前</span><span>朝のスタートに</span></div>
+      <p class="hownote rv">運動後は、栄養補給のゴールデンタイムといわれます。しっかり動いた日はその日のうちに、疲れを感じた日は就寝前や翌朝の習慣に。中学生以下は半量、乳幼児はお控えください。</p>
     </div>
   </section>
 
   <!-- ===== TARGET（説明 over image）===== -->
-  <section class="fx shot sc-btm" style="background-image:url('player-shaker.png');background-position:center 18%">
+  <section class="fx shot sc-btm" style="background-image:url('celebrate.png');background-position:center 26%">
     <div class="fx-in rv">
       <div class="cap-en">Keep moving</div>
       <h3>動き続ける人の、<span class="o">隣に。</span></h3>
