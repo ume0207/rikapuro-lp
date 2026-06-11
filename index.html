@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Recovery Pro ｜ 筋力アップも、疲労回復も。｜ meal power</title>
+<meta name="description" content="アミノ酸 × タンパク質 × クエン酸 × L-グルタミン。鍛える力も、回復する力も、毎日の一杯で。初回¥3,999の定期便。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#F58A07;
+    --orange-deep:#D9700A;
+    --orange-bright:#FF9D1C;
+    --yellow:#FFC53D;
+    --ink:#3A2A18;
+    --ink-soft:#8E7A60;
+    --white:#FFFFFF;
+    --cream:#FFFDF8;
+    --wash:#FFF4E1;
+    --wash2:#FFE8C6;
+    --line:#F1E3CC;
+
+    --f-hero:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+    --f-display:"Anton",sans-serif;
+    --f-num:"Shippori Mincho B1","Hiragino Mincho ProN",serif;
+    --f-head:"Zen Kaku Gothic New",sans-serif;
+    --f-serif:"Cormorant Garamond",serif;
+    --f-body:"Noto Sans JP","Zen Kaku Gothic New",sans-serif;
+
+    --tsh:0 1px 12px rgba(40,18,2,.5);
+    --maxw:500px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{font-family:var(--f-body);color:var(--ink);background:var(--wash2);line-height:1.75;
+    font-feature-settings:"palt";letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%;height:auto}
+  .page{max-width:var(--maxw);margin:0 auto;background:var(--cream);position:relative;overflow:hidden;
+    box-shadow:0 0 70px rgba(48,24,4,.14)}
+
+  /* ===== full-bleed image section ===== */
+  .fx{position:relative;background-size:cover;background-position:center;overflow:hidden}
+  .fx::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none}
+  .fx-in{position:relative;z-index:1;padding:48px 24px}
+  .sc-btm::before{background:linear-gradient(180deg,rgba(58,30,6,0) 0%,rgba(58,30,6,.10) 30%,rgba(48,24,4,.58) 72%,rgba(40,20,3,.86) 100%)}
+  .sc-full::before{background:linear-gradient(180deg,rgba(48,24,4,.50) 0%,rgba(48,24,4,.32) 38%,rgba(44,22,3,.70) 100%)}
+  .sc-orange::before{background:linear-gradient(180deg,rgba(214,112,10,.28) 0%,rgba(176,86,4,.46) 55%,rgba(120,58,2,.82) 100%)}
+
+  /* ===== type ===== */
+  .kicker{font-family:var(--f-display);font-size:12px;letter-spacing:.28em;color:var(--orange-deep);
+    text-transform:uppercase;display:inline-block}
+  .kicker::after{content:"";display:block;width:26px;height:3px;background:var(--orange);margin-top:8px}
+  .kicker.cen::after{margin-left:auto;margin-right:auto}
+  .kicker.lt{color:var(--yellow)}.kicker.lt::after{background:var(--yellow)}
+  .eyebrow{font-family:var(--f-serif);font-style:italic;font-weight:600;letter-spacing:.05em;font-size:18px;color:var(--orange-deep)}
+
+  h2.h{font-family:var(--f-head);font-weight:900;font-size:23px;line-height:1.5;letter-spacing:.01em;color:var(--ink)}
+  h2.h .o{color:var(--orange-deep)}
+  .on h2.h{color:#fff}.on h2.h .o{color:var(--yellow)}
+  .lead{font-size:12.5px;line-height:1.95;color:var(--ink-soft);margin-top:12px}
+  .on .lead{color:rgba(255,255,255,.92)}
+  .tsh{text-shadow:var(--tsh)}
+  .cen{text-align:center}
+  .mega{font-family:var(--f-display);text-transform:uppercase;line-height:.92;letter-spacing:.01em}
+
+  /* ===== buttons ===== */
+  .cta-box{width:100%;max-width:448px;margin:0 auto}
+  .cta-lead{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;
+    font-family:var(--f-head);font-weight:700;font-size:11.5px;letter-spacing:.02em;color:var(--ink-soft)}
+  .cta-lead .off{font-family:var(--f-head);font-weight:900;font-size:12px;letter-spacing:.03em;border-radius:6px;padding:3px 9px;
+    background:var(--orange-deep);color:#fff;box-shadow:0 4px 10px rgba(217,112,10,.32)}
+  .cta-lead s{opacity:.62}
+  .cta-lead .now{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:16px;margin-left:1px}
+  .cta-lead.lt{color:rgba(255,255,255,.94);text-shadow:var(--tsh)}
+  .cta-lead.lt .off{background:#fff;color:var(--orange-deep);box-shadow:0 4px 12px rgba(0,0,0,.22)}
+  .cta-lead.lt s{color:rgba(255,255,255,.66)}.cta-lead.lt .now{color:#fff}
+  .cta{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;
+    background:linear-gradient(135deg,#FFB23C 0%,#F58A07 46%,#DB6C07 100%);color:#fff;text-decoration:none;
+    padding:15px 22px;border-radius:999px;
+    box-shadow:0 20px 40px rgba(217,112,10,.42),0 4px 12px rgba(217,112,10,.30),inset 0 1.5px 0 rgba(255,255,255,.55);
+    border:1.5px solid rgba(255,255,255,.5);position:relative;overflow:hidden}
+  .cta .cta-main{position:relative;z-index:1;white-space:nowrap;font-family:var(--f-head);font-weight:900;font-size:17px;letter-spacing:.02em;color:#fff}
+  .cta .cta-main .pr{font-family:var(--f-num);font-weight:800;font-size:26px;margin-right:1px;letter-spacing:.01em}
+  .cta .cta-main small{font-size:11px;font-weight:700;margin:0 5px 0 2px;opacity:.92}
+  .cta::after{content:"";position:absolute;top:0;left:-55%;width:34%;height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sheen 4s ease-in-out infinite}
+  @keyframes sheen{0%,70%{left:-55%}86%,100%{left:135%}}
+  .cta .arw{flex:none;position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--orange-deep);
+    display:flex;align-items:center;justify-content:center;font-family:var(--f-head);font-weight:900;font-size:22px;box-shadow:0 5px 12px rgba(120,58,2,.30)}
+  .cta-note{font-size:11px;color:var(--ink-soft);margin-top:11px;letter-spacing:.03em}
+  .on .cta-note{color:rgba(255,255,255,.85)}
+
+  /* ===== offer bar ===== */
+  .offer{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#F58A07,#FF9D1C);color:#fff;
+    display:flex;align-items:center;justify-content:center;gap:9px;padding:8px 14px;font-weight:700;
+    font-size:11.5px;letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 12px rgba(217,112,10,.3)}
+  .offer .b{font-family:var(--f-num);font-weight:800;font-size:16px;letter-spacing:.01em}
+  .offer .sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.75)}
+
+  /* ===== HERO (別フォント = 明朝) ===== */
+  .hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;background-color:#EAD9C0}
+  .hero::before{background:linear-gradient(180deg,rgba(50,26,4,.40) 0%,rgba(50,26,4,.06) 24%,
+    rgba(50,26,4,.12) 50%,rgba(46,24,4,.62) 80%,rgba(40,20,3,.85) 100%)}
+  .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
+  .hero .top .kicker{color:var(--yellow)}.hero .top .kicker::after{background:var(--yellow);margin-left:auto;margin-right:auto}
+  .hero-in{position:relative;z-index:1;padding:0 26px 42px;text-align:center}
+  .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:40px;line-height:1.34;
+    letter-spacing:.02em;text-shadow:0 3px 22px rgba(36,16,1,.62)}
+  .hero h1 .o{color:var(--yellow)}
+  .hero .formula{font-family:var(--f-head);font-weight:700;font-size:13px;color:var(--yellow);
+    letter-spacing:.04em;margin:16px 0 6px;text-shadow:var(--tsh)}
+  .hero .sub{font-size:12.5px;color:rgba(255,255,255,.92);line-height:1.8;margin-bottom:24px;text-shadow:var(--tsh)}
+
+  /* ===== STATEMENT ===== */
+  .statement{background:var(--cream);text-align:center}
+  .statement .mega{font-size:44px;background:linear-gradient(180deg,#FF9D1C,#E0760A);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .statement .mega.l2{font-size:33px;color:var(--ink);-webkit-text-fill-color:initial;background:none;margin-top:1px}
+  .statement h2.h{margin-top:16px}
+  .statement .rule{width:40px;height:4px;background:var(--orange);margin:18px auto 0;border-radius:3px}
+
+  /* ===== explanation over image ===== */
+  .shot{min-height:66vh;display:flex;align-items:flex-end}
+  .shot.cc{align-items:center}
+  .shot .fx-in{width:100%;padding-bottom:42px}
+  .shot.cc .fx-in{padding:60px 24px}
+  .cap-en{font-family:var(--f-display);font-size:12px;letter-spacing:.24em;color:var(--yellow);text-transform:uppercase;text-shadow:var(--tsh)}
+  .shot h3{font-family:var(--f-head);font-weight:900;font-size:25px;color:#fff;line-height:1.42;margin-top:7px;text-shadow:0 2px 18px rgba(36,16,1,.6)}
+  .shot h3 .o{color:var(--yellow)}
+  .shot .desc{font-size:12.5px;color:rgba(255,255,255,.92);line-height:1.95;margin-top:13px;max-width:380px;text-shadow:var(--tsh)}
+  .shot .desc b{color:var(--yellow);font-weight:700}
+  .shot .amts{display:flex;gap:22px;margin-top:18px}
+  .shot .amts .a{}
+  .shot .amts .a .n{font-family:var(--f-num);font-weight:800;font-size:29px;color:var(--yellow);line-height:1;text-shadow:var(--tsh)}
+  .shot .amts .a .n small{font-family:var(--f-head);font-weight:700;font-size:11px;margin-left:2px}
+  .shot .amts .a .k{font-size:10.5px;color:rgba(255,255,255,.85);margin-top:4px;letter-spacing:.04em;text-shadow:var(--tsh)}
+  /* こんな方におすすめ */
+  .fx.reco::before{background:linear-gradient(180deg,rgba(40,20,3,.56) 0%,rgba(44,22,3,.48) 38%,rgba(34,17,2,.76) 100%)}
+  .reco-list{margin-top:18px}
+  .reco-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.24);
+    list-style:none;font-family:var(--f-head);font-weight:700;font-size:14px;color:#fff;line-height:1.55;text-shadow:var(--tsh)}
+  .reco-list li:last-child{border-bottom:1px solid rgba(255,255,255,.24)}
+  .reco-list li .ck{flex:none;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#FFA92E,#E0760A);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;margin-top:1px;box-shadow:0 4px 10px rgba(217,112,10,.45)}
+  .reco-list li b{color:var(--yellow);font-weight:900}
+
+  /* ===== FORMULA (light) ===== */
+  .formula-sec{background-color:var(--cream)}
+  .formula-sec::before{background:linear-gradient(180deg,rgba(255,253,248,.88),rgba(255,244,225,.82))}
+  .ing{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:2px solid var(--line)}
+  .ing:last-of-type{border-bottom:none}
+  .ing .nm{font-family:var(--f-head);font-weight:900;font-size:18px;color:var(--ink);line-height:1.2}
+  .ing .en{font-family:var(--f-serif);font-style:italic;font-size:13px;color:var(--ink-soft)}
+  .ing .ds{font-size:11.5px;color:var(--ink-soft);margin-top:5px;line-height:1.65}
+  .ing .r{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:34px;line-height:1;white-space:nowrap;text-align:right}
+  .ing .r small{font-family:var(--f-head);font-weight:700;font-size:12px;color:var(--orange);margin-left:2px}
+
+  /* ===== WHY ===== */
+  .why{background:var(--wash)}
+  .pts{margin-top:22px}
+  .pt{display:flex;align-items:center;gap:16px;padding:16px 0;border-top:2px solid var(--line)}
+  .pt:last-child{border-bottom:2px solid var(--line)}
+  .pt .no{font-family:var(--f-num);font-weight:800;font-size:30px;color:var(--orange);line-height:.9;width:40px;flex:none}
+  .pt .tx{font-family:var(--f-head);font-weight:700;font-size:14px;color:var(--ink);line-height:1.5}
+  .pt .tx b{color:var(--orange-deep);font-weight:900}
+  .pt .tx span{display:block;font-family:var(--f-body);font-weight:400;font-size:11.5px;color:var(--ink-soft);margin-top:3px;line-height:1.6}
+
+  /* ===== HOW TO ===== */
+  .how{background-color:var(--cream)}
+  .how::before{background:linear-gradient(180deg,rgba(255,253,248,.84),rgba(255,244,225,.80))}
+  .steps{margin-top:22px;display:flex;justify-content:space-between;gap:8px}
+  .stp{flex:1;text-align:center}
+  .stp .n{font-family:var(--f-num);font-weight:800;font-size:30px;color:var(--orange);line-height:1}
+  .stp .t{font-family:var(--f-head);font-weight:700;font-size:13px;color:var(--ink);margin-top:6px}
+  .stp .d{font-size:10.5px;color:var(--ink-soft);margin-top:3px;line-height:1.5}
+  .hownote{margin-top:20px;font-size:11px;color:var(--ink-soft);line-height:1.75;border-left:3px solid var(--orange);padding-left:12px}
+
+  /* ===== PRICE ===== */
+  .price{background:linear-gradient(180deg,var(--wash),var(--wash2));text-align:center}
+  .price .ribbon{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:11.5px;letter-spacing:.07em;
+    color:#fff;background:var(--orange-deep);padding:6px 16px;border-radius:999px;box-shadow:0 8px 18px rgba(217,112,10,.34)}
+  .price .was{margin-top:14px;font-size:12.5px;color:var(--ink-soft)}
+  .price .was s{font-family:var(--f-num);font-weight:700;font-size:17px;color:var(--ink-soft)}
+  .price .pp{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);line-height:.9;margin-top:4px}
+  .price .pp .yen{font-size:30px;vertical-align:.42em;margin-right:2px}
+  .price .pp .big{font-size:74px}
+  .price .pp .tax{font-family:var(--f-head);font-weight:700;font-size:13px;color:var(--ink-soft);vertical-align:.9em;margin-left:5px}
+  .price .meta{margin:18px auto 0;max-width:330px;text-align:left}
+  .price .meta div{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-soft);padding:8px 2px;border-bottom:1px solid var(--line)}
+  .price .meta div b{font-family:var(--f-head);font-weight:700;color:var(--ink)}
+  .price .cta-box{margin-top:22px}
+  .price .fine{font-size:10px;color:var(--ink-soft);margin-top:14px;line-height:1.75;max-width:360px;margin-left:auto;margin-right:auto}
+
+  /* ===== FAQ ===== */
+  .faq{background:var(--cream)}
+  details.qa{border-bottom:2px solid var(--line)}
+  details.qa summary{list-style:none;cursor:pointer;padding:15px 34px 15px 2px;position:relative;
+    font-family:var(--f-head);font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.55}
+  details.qa summary::-webkit-details-marker{display:none}
+  details.qa summary .q{font-family:var(--f-display);color:var(--orange);margin-right:8px;font-size:15px}
+  details.qa summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-family:var(--f-display);font-size:22px;color:var(--orange)}
+  details.qa[open] summary::after{content:"–"}
+  details.qa .a{padding:0 2px 15px;font-size:12px;color:var(--ink-soft);line-height:1.9}
+
+  /* ===== footer cta ===== */
+  .foot{min-height:64vh;display:flex;align-items:center;text-align:center}
+  .foot .fx-in{width:100%}
+  .foot .eyebrow{color:var(--yellow);font-style:italic}
+  .foot h2.h{margin:8px 0 20px}
+
+  /* ===== site footer ===== */
+  .site{background:var(--wash);color:var(--ink-soft);text-align:center;padding:32px 26px 116px;font-size:10.5px;line-height:1.85}
+  .site .bd{font-family:var(--f-display);font-size:19px;letter-spacing:.13em;color:var(--orange-deep);margin-bottom:5px}
+  .site a{color:var(--orange-deep);text-decoration:none;font-weight:700}
+  .site .disc{margin-top:14px;font-size:9.5px;color:#B6A488;line-height:1.75}
+
+  /* ===== sticky cta ===== */
+  .stick{position:fixed;left:50%;bottom:0;z-index:80;width:100%;max-width:var(--maxw);
+    background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:2px solid var(--wash2);
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;
+    text-decoration:none;transform:translateX(-50%) translateY(130%);transition:transform .4s ease}
+  .stick.show{transform:translateX(-50%) translateY(0)}
+  .stick .i{flex:1;min-width:0}
+  .stick .i .l1{font-size:9.5px;color:var(--ink-soft);letter-spacing:.03em;white-space:nowrap;font-weight:700}
+  .stick .i .l2{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:21px;line-height:1.1;white-space:nowrap}
+  .stick .i .l2 .y{font-size:13px;vertical-align:.12em}
+  .stick .sb{flex:none;background:linear-gradient(135deg,#FF9D1C,#E0760A);color:#fff;font-family:var(--f-head);font-weight:900;
+    font-size:12.5px;padding:12px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(217,112,10,.4)}
+
+  /* reveal */
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.cta::after{animation:none}}
+
+  @media (max-width:380px){
+    .fx-in{padding-left:20px;padding-right:20px}
+    .hero h1{font-size:35px}.statement .mega{font-size:38px}.statement .mega.l2{font-size:29px}
+    .price .pp .big{font-size:64px}.ing .r{font-size:32px}.shot h3{font-size:23px}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- OFFER BAR -->
+  <div class="offer">
+    <span>初回限定</span><span class="b">¥3,999</span>
+    <span class="sep"></span><span>送料一律 ¥500</span>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <header class="fx hero" style="background-image:url('product-turf.png')">
+    <div class="top"><span class="kicker">Recovery&nbsp;Pro</span></div>
+    <div class="hero-in">
+      <h1>筋力アップも、<br><span class="o">疲労回復も。</span></h1>
+      <div class="formula">アミノ酸 × タンパク質 × クエン酸 × グルタミン</div>
+      <p class="sub">鍛える力も、立て直す力も。<br>4つの力を、毎日の一杯で。</p>
+      <div class="cta-box">
+        <div class="cta-lead lt"><span class="off">約11%OFF</span><span>初回限定でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <a class="cta" href="https://mealpower.base.shop/items/139813936">
+          <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で購入する</span><span class="arw">→</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== こんな方におすすめ ===== -->
+  <section class="fx shot reco sc-full" style="background-image:url('gen-reco.png');background-position:center 34%">
+    <div class="fx-in rv">
+      <div class="cap-en">Who is it for?</div>
+      <h3>こんな方に、<span class="o">おすすめ。</span></h3>
+      <ul class="reco-list">
+        <li><span class="ck">✓</span><span>部活・競技に<b>本気で打ち込んでいる</b></span></li>
+        <li><span class="ck">✓</span><span>トレーニングの翌日に、<b>疲れを残したくない</b></span></li>
+        <li><span class="ck">✓</span><span>仕事や育児で、休む間もなく動いている</span></li>
+        <li><span class="ck">✓</span><span>朝のスタートが重く、なかなか抜けない</span></li>
+        <li><span class="ck">✓</span><span><b>鍛える</b>ことも、<b>回復する</b>ことも妥協したくない</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== STATEMENT ===== -->
+  <section class="statement fx-in" style="padding-top:54px;padding-bottom:54px">
+    <div class="rv">
+      <div class="mega">BUILD &amp;</div>
+      <div class="mega l2">RECOVER</div>
+      <h2 class="h">動いたぶん、<br><span class="o">ちゃんと立て直す。</span></h2>
+      <div class="rule"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM (説明 over image) ===== -->
+  <section class="fx shot sc-btm" style="background-image:url('team.png');background-position:center 16%">
+    <div class="fx-in rv">
+      <div class="cap-en">Still tired?</div>
+      <h3>その疲れ、<span class="o">持ち越していませんか。</span></h3>
+      <p class="desc">ハードに動いた翌日、体が重い。寝てもすっきりしない。──それは、使ったぶんの<b>“材料”が足りていない</b>サインかもしれません。鍛えることも、立て直すことも、必要な栄養があってこそ。</p>
+    </div>
+  </section>
+
+  <!-- ===== FORMULA ===== -->
+  <section class="fx formula-sec" style="background-image:url('gen-ingredient-bright.png')">
+    <div class="fx-in">
+      <div class="cen rv" style="margin-bottom:22px">
+        <span class="kicker cen">The Formula</span>
+        <h2 class="h" style="margin-top:14px">4つの力を、<span class="o">この一杯に。</span></h2>
+        <p class="lead">アミノ酸・タンパク質で“鍛える”を、クエン酸・L-グルタミンで“回復”を。<br>動く毎日に必要な栄養を、まとめて補えます。</p>
+      </div>
+      <div class="ing rv">
+        <div><div class="nm">タンパク質</div><div class="en">Protein</div><div class="ds">体づくりの材料。1杯あたり5g。</div></div>
+        <div class="r">5<small>g</small></div>
+      </div>
+      <div class="ing rv">
+        <div><div class="nm">クエン酸</div><div class="en">Citric Acid</div><div class="ds">柑橘由来。運動後のすっきりをサポート。</div></div>
+        <div class="r">4,200<small>mg</small></div>
+      </div>
+      <div class="ing rv">
+        <div><div class="nm">L-グルタミン</div><div class="en">L-Glutamine</div><div class="ds">体内に多いアミノ酸。コンディションの土台。</div></div>
+        <div class="r">5,040<small>mg</small></div>
+      </div>
+      <div class="ing rv">
+        <div><div class="nm">11種のビタミン</div><div class="en">Vitamins</div><div class="ds">A・D・E・B群・C ほか。立て直しを底上げ。</div></div>
+        <div class="r">11<small>種</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUILD（筋力アップ）説明 over image ===== -->
+  <section class="fx shot sc-btm" style="background-image:url('celebrate.png');background-position:center 24%">
+    <div class="fx-in rv">
+      <div class="cap-en">Build</div>
+      <h3>「筋力アップ」を、<span class="o">土台から。</span></h3>
+      <p class="desc">体づくりの材料となる<b>タンパク質</b>と、体内に多いアミノ酸<b>L-グルタミン</b>。鍛える毎日のコンディションを、栄養面からしっかり支えます。</p>
+      <div class="amts">
+        <div class="a"><div class="n">5<small>g</small></div><div class="k">タンパク質</div></div>
+        <div class="a"><div class="n">5,040<small>mg</small></div><div class="k">L-グルタミン</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECOVER（疲労回復）説明 over image ===== -->
+  <section class="fx shot sc-btm" style="background-image:url('players-drink.png');background-position:center 22%">
+    <div class="fx-in rv">
+      <div class="cap-en">Recover</div>
+      <h3>「疲労回復」を、<span class="o">その日のうちに。</span></h3>
+      <p class="desc"><b>クエン酸4,200mg</b>が運動後のすっきりをサポート。<b>L-グルタミン</b>が立て直しの土台に。爽やかな柑橘系で、ハードに動いた後でもごくごく飲めます。</p>
+      <div class="amts">
+        <div class="a"><div class="n">4,200<small>mg</small></div><div class="k">クエン酸</div></div>
+        <div class="a"><div class="n">82<small>kcal</small></div><div class="k">1杯あたり</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="why fx-in" style="padding-top:54px;padding-bottom:54px">
+    <div class="cen rv">
+      <span class="kicker cen">Why Recovery Pro</span>
+      <h2 class="h" style="margin-top:14px">「続けられる」を、<br>本気で設計。</h2>
+    </div>
+    <div class="pts">
+      <div class="pt rv"><div class="no">01</div><div class="tx"><b>量</b>にこだわった配合<span>4つの栄養を、あれこれ揃えず一杯でまとめて補える。</span></div></div>
+      <div class="pt rv"><div class="no">02</div><div class="tx">爽やかな<b>柑橘系</b>の味<span>運動後でもごくごく。水に溶かすだけ、脂質はほぼ0。</span></div></div>
+      <div class="pt rv"><div class="no">03</div><div class="tx"><b>定期便</b>で切らさない<span>1日1杯で約23食分。毎月自動でお届け、習慣が途切れない。</span></div></div>
+    </div>
+  </section>
+
+  <!-- ===== HOW TO ===== -->
+  <section class="fx how" style="background-image:url('gen-pour.png')">
+    <div class="fx-in">
+      <div class="cen rv">
+        <span class="kicker cen">How to use</span>
+        <h2 class="h" style="margin-top:14px">水に溶かして、<span class="o">ごくっと。</span></h2>
+      </div>
+      <div class="steps rv">
+        <div class="stp"><div class="n">1</div><div class="t">すくう</div><div class="d">約21g</div></div>
+        <div class="stp"><div class="n">2</div><div class="t">溶かす</div><div class="d">水150〜200ml</div></div>
+        <div class="stp"><div class="n">3</div><div class="t">飲む</div><div class="d">1日1杯</div></div>
+      </div>
+      <p class="hownote rv">運動の前後や、就寝前に。しっかり動いた日や、疲れを感じた日の習慣として取り入れてください。中学生以下は半量、乳幼児はお控えください。</p>
+    </div>
+  </section>
+
+  <!-- ===== TARGET（説明 over image）===== -->
+  <section class="fx shot sc-btm" style="background-image:url('player-shaker.png');background-position:center 18%">
+    <div class="fx-in rv">
+      <div class="cap-en">Keep moving</div>
+      <h3>動き続ける人の、<span class="o">隣に。</span></h3>
+      <p class="desc">競技に打ち込むアスリートや部活生から、仕事・育児で走り続ける毎日まで。<b>“鍛えて、回復する”</b>を習慣にしたい、すべての人へ。</p>
+    </div>
+  </section>
+
+  <!-- ===== PRICE ===== -->
+  <section class="price fx-in" style="padding-top:56px;padding-bottom:56px">
+    <div class="rv">
+      <span class="ribbon">初回限定スペシャルプライス</span>
+      <div class="was">2回目以降 <s>¥4,500</s>（税込）のところ、初回限定で</div>
+      <div class="pp"><span class="yen">¥</span><span class="big">3,999</span><span class="tax">税込</span></div>
+    </div>
+    <div class="meta rv">
+      <div><span>内容量</span><b>500g（約23食分）</b></div>
+      <div><span>お届け</span><b>毎月1回の定期便</b></div>
+      <div><span>送料</span><b>全国一律 ¥500</b></div>
+      <div><span>継続条件</span><b>3回／以降いつでも解約可</b></div>
+    </div>
+    <div class="cta-box rv">
+      <div class="cta-lead"><span class="off">約11%OFF</span><span>初回限定 <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+      <a class="cta" href="https://mealpower.base.shop/items/139813936">
+        <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で申し込む</span><span class="arw">→</span>
+      </a>
+    </div>
+    <p class="fine rv">※本定期便は3回（3ヶ月）の継続が条件です。4回目以降はマイページからいつでも解約・変更できます。価格は税込。開封後の返品はお受けできません。</p>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq fx-in" style="padding-top:50px;padding-bottom:50px">
+    <div class="cen rv" style="margin-bottom:20px">
+      <span class="kicker cen">FAQ</span>
+      <h2 class="h" style="margin-top:14px">よくある質問。</h2>
+    </div>
+    <details class="qa rv"><summary><span class="q">Q</span>いつ飲むのがおすすめ？</summary><div class="a">運動の前後、または就寝前に。1日1杯を目安に、しっかり動いた日や疲れを感じた日の習慣として取り入れてください。タイミングは生活に合わせて大丈夫です。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>プロテインと一緒に飲んでもいい？</summary><div class="a">役割が違うので併用いただけます。気になる場合はタイミングをずらしてもOK。タンパク質補給に、クエン酸・グルタミンのリカバリーを足すイメージでお使いください。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>どんな味？飲みやすい？</summary><div class="a">爽やかな柑橘系の酸味で、運動後でもごくごく飲みやすい味わいです。150〜200mlの水によく溶かしてどうぞ。脂質はほぼ0です。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>定期便はいつ解約できる？</summary><div class="a">3回（3ヶ月）の継続が条件です。4回目以降はマイページからいつでも解約・お届け周期の変更ができます。継続条件は申し込み前にご確認ください。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>子どもや妊娠中でも飲める？</summary><div class="a">中学生以下は半量を目安に、乳幼児はお控えください。妊娠を希望・妊娠初期の方は用量を守って。ご不安な場合は医師にご相談ください。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>届くまでどれくらい？</summary><div class="a">通常1〜3営業日以内に発送します（ヤマト運輸 宅急便コンパクト）。2回目以降は毎月1回、自動でお届けします。</div></details>
+  </section>
+
+  <!-- ===== FOOTER CTA ===== -->
+  <section class="fx foot sc-orange" style="background-image:url('product-turf.png');background-position:center 60%">
+    <div class="fx-in rv on" style="padding-top:80px;padding-bottom:54px">
+      <span class="eyebrow">Recovery Pro</span>
+      <h2 class="h">鍛える日も、抜く日も。<br><span class="o">立て直しは、一杯から。</span></h2>
+      <div class="cta-box">
+        <div class="cta-lead lt"><span class="off">約11%OFF</span><span>初回限定でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <a class="cta" href="https://mealpower.base.shop/items/139813936">
+          <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>ではじめる</span><span class="arw">→</span>
+        </a>
+      </div>
+      <p class="cta-note">定期便 ／ 送料¥500 ／ 日本国内製造</p>
+    </div>
+  </section>
+
+  <!-- ===== SITE FOOTER ===== -->
+  <footer class="site">
+    <div class="bd">meal&nbsp;power</div>
+    <div>Recovery Pro ／ コンディショニング・ドリンク</div>
+    <div style="margin-top:9px"><a href="https://mealpower.base.shop/items/139813936">商品ページ・ご購入はこちら →</a></div>
+    <p class="disc">※本品は食品であり、特定の疾病の診断・治療・予防を目的としたものではありません。効果の感じ方には個人差があります。最新の価格・原材料・アレルギー・販売条件は必ず商品ページの表示をご確認ください。</p>
+  </footer>
+</div>
+
+<!-- sticky cta -->
+<a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
+  <div class="i"><div class="l1">初回限定 約11%OFF ／ <s style="opacity:.7">¥4,500</s></div><div class="l2"><span class="y">¥</span>3,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <span class="sb">申し込む →</span>
+</a>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+  const stick=document.getElementById('stick'),hero=document.querySelector('.hero');
+  new IntersectionObserver((es)=>{es.forEach(e=>stick.classList.toggle('show',!e.isIntersecting))},{threshold:0}).observe(hero);
+</script>
+</body>
+</html>
