@@ -68,14 +68,16 @@
 
   /* ===== buttons ===== */
   .cta-box{width:100%;max-width:448px;margin:0 auto}
-  .cta-lead{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:12px;
-    font-family:var(--f-head);font-weight:700;font-size:11.5px;letter-spacing:.02em;color:var(--ink-soft)}
-  .cta-lead .off{font-family:var(--f-head);font-weight:900;font-size:12px;letter-spacing:.03em;border-radius:6px;padding:3px 9px;
-    background:var(--orange-deep);color:#fff;box-shadow:0 4px 10px rgba(217,112,10,.32)}
+  .cta-lead{display:flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap;margin-bottom:13px;
+    font-family:var(--f-head);font-weight:700;font-size:13.5px;letter-spacing:.02em;color:var(--ink-soft)}
+  .cta-lead .off{font-family:var(--f-head);font-weight:900;font-size:16px;letter-spacing:.03em;border-radius:8px;padding:5px 13px;
+    background:var(--orange-deep);color:#fff;box-shadow:0 5px 14px rgba(217,112,10,.38)}
+  .cta-lead .em{font-weight:900;color:var(--orange-deep)}
   .cta-lead s{opacity:.62}
-  .cta-lead .now{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:16px;margin-left:1px}
-  .cta-lead.lt{color:rgba(255,255,255,.94);text-shadow:var(--tsh)}
-  .cta-lead.lt .off{background:#fff;color:var(--orange-deep);box-shadow:0 4px 12px rgba(0,0,0,.22)}
+  .cta-lead .now{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:22px;margin-left:1px}
+  .cta-lead.lt{color:rgba(255,255,255,.96);text-shadow:var(--tsh)}
+  .cta-lead.lt .off{background:#fff;color:var(--orange-deep);box-shadow:0 4px 12px rgba(0,0,0,.25)}
+  .cta-lead.lt .em{color:var(--yellow)}
   .cta-lead.lt s{color:rgba(255,255,255,.66)}.cta-lead.lt .now{color:#fff}
   .cta{display:flex;align-items:center;justify-content:center;gap:14px;width:100%;
     background:linear-gradient(135deg,#FFB23C 0%,#F58A07 46%,#DB6C07 100%);color:#fff;text-decoration:none;
@@ -204,8 +206,8 @@
 
   /* ===== PRICE ===== */
   .price{background:linear-gradient(180deg,var(--wash),var(--wash2));text-align:center}
-  .price .ribbon{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:11.5px;letter-spacing:.07em;
-    color:#fff;background:var(--orange-deep);padding:6px 16px;border-radius:999px;box-shadow:0 8px 18px rgba(217,112,10,.34)}
+  .price .ribbon{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:14px;letter-spacing:.07em;
+    color:#fff;background:var(--orange-deep);padding:9px 22px;border-radius:999px;box-shadow:0 8px 20px rgba(217,112,10,.4)}
   .price .was{margin-top:14px;font-size:12.5px;color:var(--ink-soft)}
   .price .was s{font-family:var(--f-num);font-weight:700;font-size:17px;color:var(--ink-soft)}
   .price .pp{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);line-height:.9;margin-top:4px}
@@ -284,7 +286,7 @@
       <div class="formula"><span class="t">アミノ酸</span><span class="x">×</span><span class="t">タンパク質</span><span class="x">×</span><span class="t">クエン酸</span><span class="x">×</span><span class="t">グルタミン</span></div>
       <p class="sub">部活も、仕事も、トレーニングも。<br>4つの栄養を、毎日の一杯で。</p>
       <div class="cta-box">
-        <div class="cta-lead lt"><span class="off">約11%OFF</span><span>初回限定でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <div class="cta-lead lt"><span class="off">約11%OFF</span><span><span class="em">初回限定</span>でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
           <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
@@ -442,7 +444,7 @@
   <section class="price fx-in" style="padding-top:56px;padding-bottom:56px">
     <div class="rv">
       <span class="ribbon">初回限定スペシャルプライス</span>
-      <div class="was">2回目以降 <s>¥4,500</s>（税込）のところ、初回限定で</div>
+      <div class="was">2回目以降 <s>¥4,500</s>（税込）のところ、<b style="color:var(--orange-deep);font-weight:900">初回限定</b>で</div>
       <div class="pp"><span class="yen">¥</span><span class="big">3,999</span><span class="tax">税込</span></div>
     </div>
     <div class="meta rv">
@@ -452,7 +454,7 @@
       <div><span>継続条件</span><b>3回／以降いつでも解約可</b></div>
     </div>
     <div class="cta-box rv">
-      <div class="cta-lead"><span class="off">約11%OFF</span><span>初回限定 <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+      <div class="cta-lead"><span class="off">約11%OFF</span><span><span class="em">初回限定</span> <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
       <a class="cta" href="https://mealpower.base.shop/items/139813936">
         <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で申し込む</span><span class="arw">→</span>
       </a>
@@ -480,7 +482,7 @@
       <span class="eyebrow">Recovery Pro</span>
       <h2 class="h">動いた日も、休む日も。<br><span class="o">補給は、一杯から。</span></h2>
       <div class="cta-box">
-        <div class="cta-lead lt"><span class="off">約11%OFF</span><span>初回限定でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <div class="cta-lead lt"><span class="off">約11%OFF</span><span><span class="em">初回限定</span>でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
           <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>ではじめる</span><span class="arw">→</span>
         </a>
@@ -500,7 +502,7 @@
 
 <!-- sticky cta -->
 <a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
-  <div class="i"><div class="l1">初回限定 約11%OFF ／ <s style="opacity:.7">¥4,500</s></div><div class="l2"><span class="y">¥</span>3,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">初回限定 約11%OFF</b> ／ <s style="opacity:.7">¥4,500</s></div><div class="l2"><span class="y">¥</span>3,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
   <span class="sb">申し込む →</span>
 </a>
 
