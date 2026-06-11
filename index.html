@@ -102,15 +102,17 @@
 
   /* ===== HERO (別フォント = 明朝) ===== */
   .hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;background-color:#EAD9C0}
-  .hero::before{background:linear-gradient(180deg,rgba(50,26,4,.40) 0%,rgba(50,26,4,.06) 24%,
-    rgba(50,26,4,.12) 50%,rgba(46,24,4,.62) 80%,rgba(40,20,3,.85) 100%)}
+  .hero::before{background:linear-gradient(180deg,rgba(50,26,4,.56) 0%,rgba(50,26,4,.34) 24%,
+    rgba(50,26,4,.16) 50%,rgba(46,24,4,.62) 80%,rgba(40,20,3,.85) 100%)}
   .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
+  .hero-catch{position:absolute;left:0;right:0;top:26%;transform:translateY(-50%);z-index:1;
+    text-align:center;padding:0 20px}
   .hero .top .kicker{color:var(--yellow)}.hero .top .kicker::after{background:var(--yellow);margin-left:auto;margin-right:auto}
   .hero-in{position:relative;z-index:1;padding:0 26px 42px;text-align:center}
   .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:clamp(26px,7.6vw,35px);line-height:1.42;
     letter-spacing:.01em;text-shadow:0 3px 22px rgba(36,16,1,.62);white-space:nowrap}
   .hero h1 .o{color:var(--yellow)}
-  .hero .formula{margin:30px 0 10px;white-space:nowrap}
+  .hero .formula{margin:0 0 10px;white-space:nowrap}
   .hero .formula .t{font-family:var(--f-hero);font-weight:800;font-size:clamp(13px,3.6vw,17px);color:var(--yellow);
     letter-spacing:.01em;text-shadow:0 2px 16px rgba(36,16,1,.65)}
   .hero .formula .x{font-family:var(--f-serif);font-style:italic;font-size:clamp(11px,3vw,15px);color:rgba(255,255,255,.92);
@@ -275,8 +277,10 @@
   <!-- ===== HERO ===== -->
   <header class="fx hero" style="background-image:url('product-turf.png')">
     <div class="top"><span class="kicker">Recovery&nbsp;Pro</span></div>
-    <div class="hero-in">
+    <div class="hero-catch">
       <h1>がんばった日の、<br><span class="o">リカバリー&amp;体づくり。</span></h1>
+    </div>
+    <div class="hero-in">
       <div class="formula"><span class="t">アミノ酸</span><span class="x">×</span><span class="t">タンパク質</span><span class="x">×</span><span class="t">クエン酸</span><span class="x">×</span><span class="t">グルタミン</span></div>
       <p class="sub">部活も、仕事も、トレーニングも。<br>4つの栄養を、毎日の一杯で。</p>
       <div class="cta-box">
@@ -307,7 +311,7 @@
   <section class="fx shot sc-btm" style="background-image:url('team.png');background-position:center 16%">
     <div class="fx-in rv">
       <div class="cap-en">Enough fuel?</div>
-      <h3>がんばった日の栄養、<span class="o">足りていますか。</span></h3>
+      <h3>がんばった日の栄養、<br><span class="o">足りていますか。</span></h3>
       <p class="desc">ハードに動いた日ほど、体は多くの栄養を使います。──使ったぶんを<b>補えないまま</b>、次の日を迎えていませんか。鍛えることも、続けることも、必要な栄養があってこそ。</p>
     </div>
   </section>
@@ -426,7 +430,7 @@
   </section>
 
   <!-- ===== TARGET（説明 over image）===== -->
-  <section class="fx shot sc-btm" style="background-image:url('celebrate.png');background-position:center 26%">
+  <section class="fx shot sc-btm" style="background-image:url('celebrate-wo.png');background-position:center 26%">
     <div class="fx-in rv">
       <div class="cap-en">Keep moving</div>
       <h3>動き続ける人の、<span class="o">隣に。</span></h3>
