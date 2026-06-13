@@ -317,22 +317,23 @@
   .stick .sb{flex:none;background:linear-gradient(135deg,#FF9D1C,#E0760A);color:#fff;font-family:var(--f-head);font-weight:900;
     font-size:12.5px;padding:12px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(217,112,10,.4)}
 
-  /* ===== お客様の声 VOICE ===== */
+  /* ===== お客様の声 VOICE（写真左・文章右） ===== */
   .voice{background:linear-gradient(180deg,var(--cream),var(--wash))}
-  .vlist{margin-top:26px}
-  .vitem{padding:22px 0;border-top:1.5px solid var(--line)}
-  .vitem:first-child{border-top:none}
-  .vhead{display:flex;align-items:center;gap:13px}
-  .vava{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:none;
-    border:2.5px solid #fff;box-shadow:0 4px 14px rgba(217,112,10,.28);outline:2px solid var(--orange)}
-  .vmeta .vname{font-family:var(--f-head);font-weight:900;font-size:14px;color:var(--ink);line-height:1.4}
-  .vmeta .vname span{font-weight:700;color:var(--ink-soft);font-size:12px}
-  .vmeta .vrole{font-size:11px;color:var(--ink-soft);margin-top:2px}
-  .vmeta .vq{font-family:var(--f-display);font-size:14px;letter-spacing:.18em;color:var(--orange);margin-top:3px}
-  .vquote{position:relative;margin-top:13px;padding-left:24px;font-size:13px;line-height:1.95;color:var(--ink)}
-  .vquote::before{content:"\201C";position:absolute;left:-2px;top:-8px;font-family:var(--f-serif);
-    font-style:italic;font-size:42px;color:var(--orange);opacity:.55;line-height:1}
-  .vnote{margin-top:22px;font-size:10.5px;color:var(--ink-soft);line-height:1.7;text-align:center}
+  .vlist{margin-top:26px;display:flex;flex-direction:column;gap:16px}
+  .vitem{display:flex;align-items:stretch;background:#fff;border-radius:20px;overflow:hidden;
+    box-shadow:0 12px 30px rgba(217,112,10,.13);border:1px solid #F3E7D2}
+  .vimg{position:relative;width:44%;flex:none;background:#EDE3D2}
+  .vimg img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+  .vimg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0) 70%,rgba(255,255,255,.12) 100%)}
+  .vbody{flex:1;min-width:0;padding:18px 18px 17px;display:flex;flex-direction:column;justify-content:center}
+  .vbody .vq{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:34px;color:var(--orange);line-height:.6;height:16px}
+  .vbody .vquote{font-size:12px;line-height:1.85;color:var(--ink);margin:6px 0 12px;font-weight:500}
+  .vbody .vname{font-family:var(--f-head);font-weight:900;font-size:14.5px;color:var(--ink);line-height:1.3;
+    padding-top:11px;border-top:1.5px solid var(--line)}
+  .vbody .vname span{font-weight:700;color:var(--ink-soft);font-size:12px;margin-left:2px}
+  .vbody .vrole{font-size:10.5px;color:var(--orange-deep);font-weight:700;margin-top:3px;line-height:1.4}
+  .vnote{margin-top:20px;font-size:10.5px;color:var(--ink-soft);line-height:1.7;text-align:center}
+  @media (max-width:380px){.vbody{padding:14px 13px}.vbody .vquote{font-size:11.5px}.vimg{width:42%}}
 
   /* ===== グルタミン解説 ===== */
   .glu{background:linear-gradient(180deg,#FFFDF8,var(--wash))}
@@ -425,34 +426,31 @@
     </div>
     <div class="vlist">
       <div class="vitem rv">
-        <div class="vhead">
-          <img class="vava" src="voice-1.png" alt="野球・投手 佐々木さん" />
-          <div class="vmeta">
-            <div class="vname">佐々木さん <span>(21)</span></div>
-            <div class="vrole">野球・投手／BCL福島レッドホープス</div>
-          </div>
+        <div class="vimg"><img src="vimg-1.png" alt="野球・投手 佐々木さん 投球" /></div>
+        <div class="vbody">
+          <div class="vq">“</div>
+          <p class="vquote">連投や練習量が増える時期もありますが、毎日続けてからは朝起きやすくなった気がします。練習後に水で溶かすのが自分のルーティンです。</p>
+          <div class="vname">佐々木さん <span>(21)</span></div>
+          <div class="vrole">野球・投手／BCL福島レッドホープス</div>
         </div>
-        <p class="vquote">シーズン中は連投や練習量が増える時期もありますが、毎日続けてからは朝起きやすくなった気がします。練習後に水で溶かして飲むのが、自分のルーティンになっています。</p>
       </div>
       <div class="vitem rv">
-        <div class="vhead">
-          <img class="vava" src="voice-2.png" alt="整骨院 院長・柔道整復師" />
-          <div class="vmeta">
-            <div class="vname">西さん <span>(33)</span></div>
-            <div class="vrole">整骨院R. 院長／柔道整復師</div>
-          </div>
+        <div class="vimg"><img src="vimg-2.png" alt="整骨院R. 院長・柔道整復師 施術" /></div>
+        <div class="vbody">
+          <div class="vq">“</div>
+          <p class="vquote">一日中立ちっぱなしの施術仕事ですが、夕方の疲れが残りにくく感じています。個人的には翌朝の目覚めも軽い気がして、プロとして続けたい一杯です。</p>
+          <div class="vname">西さん <span>(33)</span></div>
+          <div class="vrole">整骨院R. 院長／柔道整復師</div>
         </div>
-        <p class="vquote">一日中立ちっぱなしで施術する仕事なので、夕方の疲れが残りにくかったように感じています。個人的には翌朝の目覚めも軽い気がして、プロとして長く続けていきたい一杯です。</p>
       </div>
       <div class="vitem rv">
-        <div class="vhead">
-          <img class="vava" src="voice-3.png" alt="ボディビル" />
-          <div class="vmeta">
-            <div class="vname">田中さん <span>(20)</span></div>
-            <div class="vrole">ボディビル</div>
-          </div>
+        <div class="vimg"><img src="vimg-3.png" alt="ボディビル 田中さん" /></div>
+        <div class="vbody">
+          <div class="vq">“</div>
+          <p class="vquote">増量期はトレ後の補給が大事なので習慣にしています。続けるうちに体が疲れにくくなった気がして、筋肉も大きく強くなった気がします。</p>
+          <div class="vname">田中さん <span>(20)</span></div>
+          <div class="vrole">ボディビル</div>
         </div>
-        <p class="vquote">増量期はトレ後の補給が大事なので習慣にしています。続けるうちに体が疲れにくくなった気がして、筋肉も大きく強くなった気がします。動きやすくなったのも個人的にうれしいです。</p>
       </div>
     </div>
     <p class="vnote rv">※掲載の内容は個人の感想であり、効果・効能を保証するものではありません。</p>
