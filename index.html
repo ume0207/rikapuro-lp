@@ -327,16 +327,20 @@
     font-size:12.5px;padding:12px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(217,112,10,.4)}
 
   /* ===== お客様の声 VOICE（写真左・文章右・高さ統一） ===== */
-  .voice{background:linear-gradient(180deg,var(--cream),var(--wash))}
-  .vlist{margin-top:26px;display:flex;flex-direction:column;gap:15px}
+  .voice{position:relative;overflow:hidden;background:var(--wash)}
+  .voice::before{content:"";position:absolute;inset:-30px;z-index:0;
+    background:linear-gradient(180deg,rgba(255,251,244,.60),rgba(255,242,222,.66)),url('gen-ingredient-bright.png') center/cover;
+    filter:blur(20px) saturate(1.05)}
+  .voice>*{position:relative;z-index:1}
+  .vlist{margin-top:18px;display:flex;flex-direction:column;gap:15px}
   .vitem{display:flex;height:184px;background:#fff;border-radius:22px;overflow:hidden;
     box-shadow:0 16px 36px rgba(217,112,10,.15),0 2px 6px rgba(48,24,4,.07);border:1px solid #F4E8D4}
   .vimg{position:relative;width:46%;flex:none;background:#EDE3D2;overflow:hidden}
-  .vimg img{width:100%;height:100%;object-fit:cover;display:block}
+  .vimg img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(1.2px) saturate(.9) brightness(1.05)}
   .vitem:nth-child(1) .vimg img{object-position:50% 30%}
   .vitem:nth-child(2) .vimg img{object-position:50% 20%}
   .vitem:nth-child(3) .vimg img{object-position:50% 12%}
-  .vimg::after{content:"";position:absolute;inset:0;box-shadow:inset -16px 0 26px -14px rgba(40,20,4,.30)}
+  .vimg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.12),rgba(255,255,255,.2));box-shadow:inset -16px 0 26px -14px rgba(40,20,4,.2)}
   .vbody{flex:1;min-width:0;padding:15px 16px;display:flex;flex-direction:column;justify-content:center;position:relative}
   .vbody .vq{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:40px;color:var(--orange);
     line-height:.5;height:15px;opacity:.5}
@@ -437,10 +441,10 @@
   </section>
 
   <!-- ===== お客様の声 VOICE ===== -->
-  <section class="voice fx-in" style="padding-top:54px;padding-bottom:54px">
+  <section class="voice fx-in" style="padding-top:26px;padding-bottom:34px">
     <div class="cen rv">
       <span class="kicker cen">Voice</span>
-      <h2 class="h" style="margin-top:14px">動く毎日に、<span class="o">選ばれている。</span></h2>
+      <h2 class="h" style="margin-top:12px">ご愛用者さまの、<span class="o">声。</span></h2>
     </div>
     <div class="vlist">
       <div class="vitem rv">
