@@ -61,8 +61,10 @@
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{font-family:var(--f-body);color:var(--ink);background:var(--wash2);line-height:1.75;
-    font-feature-settings:"palt";letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+    font-feature-settings:"palt";letter-spacing:.01em;-webkit-font-smoothing:antialiased;text-wrap:pretty}
   img{display:block;max-width:100%;height:auto}
+  /* スマホでの改行崩れ防止: 見出し等は均等割り、本文は孤立文字を防ぐ(bodyから継承) */
+  h1,h2,h3,h4,.glu-sub,.glu-tag,.ing .nm,.glu-work .gt,.glu-flow .fstep,.cta-lead>span,.bridge,.equote,.glu-close,.titem,.reco-list li{text-wrap:balance}
   .page{max-width:var(--maxw);margin:0 auto;background:var(--cream);position:relative;overflow:hidden;
     box-shadow:0 0 70px rgba(48,24,4,.14)}
 
@@ -522,7 +524,7 @@
       <div class="cen rv" style="margin-bottom:22px">
         <span class="kicker cen">The Formula</span>
         <h2 class="h" style="margin-top:14px">4つの力を、<span class="o">この一杯に。</span></h2>
-        <p class="lead">クエン酸・タンパク質（L-グルタミン）・マルトデキストリン・ビタミン。<br>動く毎日に必要な栄養を、まとめて補えます。</p>
+        <p class="lead">動く毎日に必要な4つの栄養を、<br>この一杯にまとめて補えます。</p>
       </div>
       <div class="ing rv">
         <div><div class="nm">クエン酸</div><div class="en">Citric Acid</div><div class="ds">柑橘由来。運動後のすっきりをサポート。</div></div>
