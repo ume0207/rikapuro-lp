@@ -320,17 +320,26 @@
     color:rgba(255,255,255,.92);text-shadow:var(--tsh);line-height:1.6}
 
   /* ===== sticky cta ===== */
-  .stick{position:fixed;left:50%;bottom:0;z-index:80;width:100%;max-width:var(--maxw);
-    background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:2px solid var(--wash2);
-    padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;
-    text-decoration:none;transform:translateX(-50%) translateY(130%);transition:transform .4s ease}
+  .stick{position:fixed;left:50%;z-index:80;width:calc(100% - 20px);max-width:474px;
+    bottom:calc(12px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+    border:1px solid rgba(247,232,212,.9);border-radius:19px;
+    box-shadow:0 16px 40px rgba(48,24,4,.30),0 4px 12px rgba(48,24,4,.16);
+    padding:9px 9px 9px 18px;display:flex;align-items:center;gap:11px;
+    text-decoration:none;transform:translateX(-50%) translateY(170%);transition:transform .5s cubic-bezier(.2,.85,.25,1)}
   .stick.show{transform:translateX(-50%) translateY(0)}
   .stick .i{flex:1;min-width:0}
-  .stick .i .l1{font-size:9.5px;color:var(--ink-soft);letter-spacing:.03em;white-space:nowrap;font-weight:700}
-  .stick .i .l2{font-family:var(--f-num);font-weight:800;color:var(--orange-deep);font-size:21px;line-height:1.1;white-space:nowrap}
-  .stick .i .l2 .y{font-size:13px;vertical-align:.12em}
+  .stick .i .l1{font-size:10px;color:var(--orange-deep);letter-spacing:.02em;white-space:nowrap;font-weight:900;
+    display:flex;align-items:center;gap:5px}
+  .stick .i .l1::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);flex:none}
+  .stick .i .l2{font-family:var(--f-num);font-weight:800;color:var(--ink);font-size:23px;line-height:1.15;white-space:nowrap;margin-top:1px}
+  .stick .i .l2 .y{font-size:14px;color:var(--orange-deep);vertical-align:.12em}
+  .stick .i .l2 s{font-family:var(--f-num);font-weight:600;font-size:13px;color:var(--ink-soft);opacity:.7;margin-right:6px}
   .stick .sb{flex:none;background:linear-gradient(135deg,#FF9D1C,#E0760A);color:#fff;font-family:var(--f-head);font-weight:900;
-    font-size:12.5px;padding:12px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(217,112,10,.4)}
+    font-size:13.5px;padding:14px 20px;border-radius:14px;white-space:nowrap;box-shadow:0 8px 20px rgba(217,112,10,.5);
+    display:flex;align-items:center;gap:7px}
+  .stick .sb .a{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;
+    background:rgba(255,255,255,.92);color:var(--orange-deep);font-family:var(--f-num);font-weight:800;font-size:14px}
 
   /* ===== お客様の声 VOICE（写真左・文章右・高さ統一） ===== */
   .voice{position:relative;overflow:hidden;background:var(--wash)}
@@ -758,8 +767,8 @@
 
 <!-- sticky cta -->
 <a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
-  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">クーポンで定期便</b> ／ 通常<s style="opacity:.7">¥5,000</s></div><div class="l2"><span class="y">¥</span>2,498<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
-  <span class="sb">申し込む →</span>
+  <div class="i"><div class="l1">クーポンで定期便がお得</div><div class="l2"><s>¥5,000</s><span class="y">¥</span>2,498<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <span class="sb">申し込む<span class="a">→</span></span>
 </a>
 
 <script>
