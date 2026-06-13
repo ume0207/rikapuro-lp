@@ -132,18 +132,18 @@
   .offer .sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.75)}
 
   /* ===== HERO (別フォント = 明朝) ===== */
-  .hero{min-height:90vh;display:flex;flex-direction:column;justify-content:flex-end;background-color:#EAD9C0}
+  .hero{min-height:96vh;display:flex;flex-direction:column;justify-content:flex-end;background-color:#EAD9C0}
   .hero::before{background:linear-gradient(180deg,rgba(50,26,4,.56) 0%,rgba(50,26,4,.34) 24%,
     rgba(50,26,4,.16) 50%,rgba(46,24,4,.62) 80%,rgba(40,20,3,.85) 100%)}
   .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
-  .hero-catch{position:absolute;left:0;right:0;top:26%;transform:translateY(-50%);z-index:1;
+  .hero-catch{position:absolute;left:0;right:0;top:18%;transform:translateY(-50%);z-index:1;
     text-align:center;padding:0 20px}
   .hero .top .kicker{color:var(--yellow)}.hero .top .kicker::after{background:var(--yellow);margin-left:auto;margin-right:auto}
   .hero-in{position:relative;z-index:1;padding:0 26px 42px;text-align:center}
-  .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:clamp(26px,7.6vw,35px);line-height:1.42;
+  .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:clamp(26px,7.6vw,35px);line-height:1.58;
     letter-spacing:.01em;text-shadow:0 3px 22px rgba(36,16,1,.62);white-space:nowrap}
   .hero h1 .o{color:var(--yellow)}
-  .hero .formula{margin:0 0 10px;white-space:nowrap}
+  .hero .formula{margin:0 0 12px;white-space:nowrap}
   .hero .formula .t{font-family:var(--f-hero);font-weight:800;font-size:clamp(13px,3.6vw,17px);color:var(--yellow);
     letter-spacing:.01em;text-shadow:0 2px 16px rgba(36,16,1,.65)}
   .hero .formula .x{font-family:var(--f-serif);font-style:italic;font-size:clamp(11px,3vw,15px);color:rgba(255,255,255,.92);
@@ -290,6 +290,8 @@
   .plan .pl-price s{font-family:var(--f-num);font-size:14px;color:var(--ink-soft);opacity:.7}
   .plan .pl-price .v{font-family:var(--f-num);font-weight:800;font-size:27px;color:var(--orange-deep);line-height:1;margin-left:5px}
   .plan .pl-price .v small{font-size:11px;font-weight:700;margin-left:1px}
+  .plans-note{margin:14px auto 0;max-width:360px;text-align:center;font-size:12px;line-height:1.75;color:var(--ink-soft);font-weight:500}
+  .plans-note b{color:var(--orange-deep);font-weight:900}
   .plan .pl-badge{position:absolute;top:-11px;left:16px;font-family:var(--f-head);font-weight:900;font-size:10.5px;color:#fff;
     background:var(--orange-deep);border-radius:999px;padding:3px 12px;letter-spacing:.04em}
   .coupon{margin:22px auto 0;max-width:370px;background:#fff;border:2px dashed var(--orange);border-radius:16px;
@@ -336,11 +338,11 @@
   .vitem{display:flex;height:184px;background:#fff;border-radius:22px;overflow:hidden;
     box-shadow:0 16px 36px rgba(217,112,10,.15),0 2px 6px rgba(48,24,4,.07);border:1px solid #F4E8D4}
   .vimg{position:relative;width:46%;flex:none;background:#EDE3D2;overflow:hidden}
-  .vimg img{width:100%;height:100%;object-fit:cover;display:block;filter:blur(1.2px) saturate(.9) brightness(1.05)}
+  .vimg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.26) saturate(.9) contrast(.95)}
   .vitem:nth-child(1) .vimg img{object-position:50% 30%}
   .vitem:nth-child(2) .vimg img{object-position:50% 20%}
   .vitem:nth-child(3) .vimg img{object-position:50% 12%}
-  .vimg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.12),rgba(255,255,255,.2));box-shadow:inset -16px 0 26px -14px rgba(40,20,4,.2)}
+  .vimg::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,.18),rgba(255,255,255,.28));box-shadow:inset -16px 0 26px -14px rgba(40,20,4,.16)}
   .vbody{flex:1;min-width:0;padding:15px 16px;display:flex;flex-direction:column;justify-content:center;position:relative}
   .vbody .vq{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:40px;color:var(--orange);
     line-height:.5;height:15px;opacity:.5}
@@ -358,33 +360,33 @@
   /* ===== グルタミン解説（画像の上に白文字） ===== */
   .glu h2.h{color:#fff}.glu h2.h .o{color:var(--yellow)}
   .glu .kicker{color:var(--yellow)}.glu .kicker::after{background:var(--yellow)}
-  .glu .gintro{font-size:13px;line-height:1.95;color:rgba(255,255,255,.94);margin-top:14px;text-align:center;text-shadow:var(--tsh)}
+  .glu .gintro{font-size:13.5px;line-height:2;color:rgba(255,255,255,.95);margin-top:14px;text-align:center;text-shadow:var(--tsh)}
   .glu .gintro b{color:var(--yellow);font-weight:900}
-  .glu-sub{font-family:var(--f-head);font-weight:900;font-size:15px;color:#fff;margin:30px 0 2px;
-    display:flex;align-items:center;gap:9px;text-shadow:var(--tsh)}
-  .glu-sub::before{content:"";width:20px;height:3px;background:var(--yellow);border-radius:2px;flex:none}
-  .glu-works{margin-top:10px}
-  .glu-work{display:flex;gap:14px;align-items:center;padding:13px 0;border-top:1px solid rgba(255,255,255,.24)}
+  .glu-sub{font-family:var(--f-head);font-weight:900;font-size:18px;color:#fff;margin:40px 0 4px;
+    display:flex;align-items:center;gap:11px;text-shadow:var(--tsh);letter-spacing:.01em}
+  .glu-sub::before{content:"";width:24px;height:4px;background:var(--yellow);border-radius:2px;flex:none}
+  .glu-works{margin-top:12px}
+  .glu-work{display:flex;gap:16px;align-items:center;padding:15px 0;border-top:1px solid rgba(255,255,255,.26)}
   .glu-work:first-child{border-top:none}
-  .glu-work .gn{font-family:var(--f-num);font-weight:800;font-size:25px;color:var(--yellow);line-height:1;width:30px;flex:none;text-align:center;text-shadow:var(--tsh)}
-  .glu-work .gt{font-family:var(--f-head);font-weight:700;font-size:13.5px;color:#fff;line-height:1.5;text-shadow:var(--tsh)}
+  .glu-work .gn{font-family:var(--f-num);font-weight:800;font-size:32px;color:var(--yellow);line-height:1;width:34px;flex:none;text-align:center;text-shadow:var(--tsh)}
+  .glu-work .gt{font-family:var(--f-head);font-weight:700;font-size:14.5px;color:#fff;line-height:1.55;text-shadow:var(--tsh)}
   .glu-work .gt b{color:var(--yellow);font-weight:900}
-  .glu-tag{display:inline-block;margin-top:18px;font-family:var(--f-head);font-weight:900;font-size:12.5px;color:#fff;
-    background:linear-gradient(135deg,#FFA92E,#E0760A);border-radius:999px;padding:8px 18px;box-shadow:0 6px 16px rgba(0,0,0,.3)}
-  .glu-box{margin-top:12px;background:rgba(20,12,4,.46);backdrop-filter:blur(3px);border-radius:14px;padding:16px 18px;border-left:4px solid var(--yellow)}
-  .glu-box .lbl{font-family:var(--f-head);font-weight:900;font-size:11px;letter-spacing:.08em;color:var(--yellow);margin-bottom:7px}
-  .glu-box p{font-size:12.5px;line-height:1.95;color:#fff;text-shadow:var(--tsh)}
+  .glu-tag{display:inline-block;margin-top:22px;font-family:var(--f-head);font-weight:900;font-size:16px;color:#fff;line-height:1.5;
+    background:linear-gradient(135deg,#FFA92E,#E0760A);border-radius:16px;padding:14px 26px;box-shadow:0 10px 22px rgba(0,0,0,.32)}
+  .glu-box{margin-top:14px;background:rgba(18,11,3,.5);backdrop-filter:blur(3px);border-radius:16px;padding:18px 20px;border-left:5px solid var(--yellow)}
+  .glu-box .lbl{font-family:var(--f-head);font-weight:900;font-size:11.5px;letter-spacing:.1em;color:var(--yellow);margin-bottom:8px}
+  .glu-box p{font-size:13px;line-height:2;color:#fff;text-shadow:var(--tsh)}
   .glu-box p b{color:var(--yellow);font-weight:900}
-  .glu-flow{margin-top:14px;text-align:center}
-  .glu-flow .fstep{font-family:var(--f-head);font-weight:700;font-size:13px;color:#fff;line-height:1.65;text-shadow:var(--tsh)}
-  .glu-flow .fstep.dim{color:rgba(255,255,255,.82);font-weight:500;font-size:12.5px}
-  .glu-flow .fstep.hl{font-weight:900;color:var(--yellow);font-size:14px}
-  .glu-flow .far{color:var(--yellow);font-family:var(--f-num);font-weight:800;font-size:20px;margin:5px 0;line-height:1}
-  .glu-flow .fpill{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:12px;color:#fff;
-    background:var(--orange-deep);border-radius:999px;padding:5px 14px;margin:6px 0;box-shadow:0 4px 12px rgba(0,0,0,.3)}
-  .glu-close{margin-top:16px;text-align:center;font-family:var(--f-head);font-weight:900;font-size:13.5px;color:#fff;line-height:1.7;text-shadow:var(--tsh)}
+  .glu-flow{margin-top:16px;text-align:center}
+  .glu-flow .fstep{font-family:var(--f-head);font-weight:700;font-size:13.5px;color:#fff;line-height:1.7;text-shadow:var(--tsh)}
+  .glu-flow .fstep.dim{color:rgba(255,255,255,.85);font-weight:500;font-size:13px}
+  .glu-flow .fstep.hl{font-weight:900;color:var(--yellow);font-size:17px;line-height:1.5}
+  .glu-flow .far{color:var(--yellow);font-family:var(--f-num);font-weight:800;font-size:22px;margin:7px 0;line-height:1}
+  .glu-flow .fpill{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:16px;color:#fff;
+    background:linear-gradient(135deg,#FF9D1C,#E0760A);border-radius:999px;padding:11px 26px;margin:8px 0;box-shadow:0 8px 20px rgba(0,0,0,.34)}
+  .glu-close{margin-top:20px;text-align:center;font-family:var(--f-head);font-weight:900;font-size:15px;color:#fff;line-height:1.75;text-shadow:var(--tsh)}
   .glu-close b{color:var(--yellow)}
-  .gnote{margin-top:18px;font-size:10px;color:rgba(255,255,255,.8);line-height:1.7;text-align:center;text-shadow:var(--tsh)}
+  .gnote{margin-top:20px;font-size:10px;color:rgba(255,255,255,.8);line-height:1.7;text-align:center;text-shadow:var(--tsh)}
 
   /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -403,7 +405,7 @@
   <!-- OFFER BAR -->
   <div class="offer">
     <span>クーポンで</span><span class="b">定期便¥2,498</span>
-    <span class="sep"></span><span>通常¥3,999</span>
+    <span class="sep"></span><span>通常¥5,000</span>
   </div>
 
   <!-- ===== HERO ===== -->
@@ -416,7 +418,7 @@
       <div class="formula"><span class="t">アミノ酸</span><span class="x">×</span><span class="t">タンパク質</span><span class="x">×</span><span class="t">クエン酸</span><span class="x">×</span><span class="t">グルタミン</span></div>
       <p class="sub">部活も、仕事も、トレーニングも。<br>4つの栄養を、毎日の一杯で。</p>
       <div class="cta-box">
-        <div class="cta-lead lt big"><span><span class="em">クーポン</span>で定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
+        <div class="cta-lead lt big"><span>通常 <s>¥5,000</s> → <span class="em">クーポン</span>で定期便 <span class="now">¥2,498</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
@@ -668,11 +670,12 @@
         <div class="pl-price"><s>¥5,000</s><span class="v">¥3,499<small>税込</small></span></div>
       </div>
       <div class="plan best">
-        <span class="pl-badge">いちばんお得</span>
+        <span class="pl-badge">さらにお得</span>
         <div class="pl-name">定期便（毎月お届け）<small>続けて習慣にしたい方に</small></div>
-        <div class="pl-price"><s>¥3,999</s><span class="v">¥2,498<small>税込</small></span></div>
+        <div class="pl-price"><s>¥5,000</s><span class="v">¥2,498<small>税込</small></span></div>
       </div>
     </div>
+    <p class="plans-note rv">クーポンは<b>単品（1回のみ）・定期便どちらのご購入にも</b>使えます。続けるなら<b>定期便がさらにお得</b>です。</p>
 
     <div class="coupon rv">
       <div class="clbl">＼ このページ限定クーポン ／</div>
@@ -695,7 +698,7 @@
     </div>
 
     <div class="cta-box rv">
-      <div class="cta-lead"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
+      <div class="cta-lead"><span class="off">クーポン適用</span><span>通常 <s>¥5,000</s> → 定期便 <span class="now">¥2,498</span></span></div>
       <a class="cta" href="https://mealpower.base.shop/items/139813936">
         <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
       </a>
@@ -723,7 +726,7 @@
       <span class="eyebrow">Recovery Pro</span>
       <h2 class="h">動いた日も、休む日も。<br><span class="o">補給は、一杯から。</span></h2>
       <div class="cta-box">
-        <div class="cta-lead lt"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
+        <div class="cta-lead lt"><span class="off">クーポン適用</span><span>通常 <s>¥5,000</s> → 定期便 <span class="now">¥2,498</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
@@ -749,7 +752,7 @@
 
 <!-- sticky cta -->
 <a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
-  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">クーポンで定期便</b> ／ <s style="opacity:.7">¥3,999</s></div><div class="l2"><span class="y">¥</span>2,498<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">クーポンで定期便</b> ／ 通常<s style="opacity:.7">¥5,000</s></div><div class="l2"><span class="y">¥</span>2,498<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
   <span class="sb">申し込む →</span>
 </a>
 
