@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Recovery Pro ｜ がんばった日の、リカバリー&体づくり。｜ meal power</title>
-<meta name="description" content="アミノ酸 × タンパク質 × クエン酸 × L-グルタミン。動く毎日の栄養補給を、一杯で。初回¥3,999の定期便。" />
+<meta name="description" content="アミノ酸 × タンパク質 × クエン酸 × L-グルタミン。動く毎日の栄養補給を、一杯で。このページ限定クーポンで定期便¥2,498。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Shippori+Mincho+B1:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Cormorant+Garamond:ital,wght@1,600&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -279,6 +279,31 @@
   .ig-btn .ig-id{font-family:var(--f-display);font-weight:400;font-size:12px;letter-spacing:.05em;
     background:rgba(255,255,255,.2);border-radius:999px;padding:3px 10px}
 
+  /* ===== 価格プラン2択 ＋ クーポン ===== */
+  .plans{display:flex;flex-direction:column;gap:11px;margin:8px auto 0;max-width:380px}
+  .plan{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 17px;border-radius:15px;
+    background:#fff;border:1.5px solid var(--line);text-align:left}
+  .plan.best{border-color:var(--orange);background:linear-gradient(135deg,#FFF6E9,#FFEACB);position:relative;box-shadow:0 10px 24px rgba(217,112,10,.18)}
+  .plan .pl-name{font-family:var(--f-head);font-weight:900;font-size:14px;color:var(--ink);line-height:1.3}
+  .plan .pl-name small{display:block;font-weight:500;font-size:10.5px;color:var(--ink-soft);margin-top:3px}
+  .plan .pl-price{text-align:right;white-space:nowrap}
+  .plan .pl-price s{font-family:var(--f-num);font-size:14px;color:var(--ink-soft);opacity:.7}
+  .plan .pl-price .v{font-family:var(--f-num);font-weight:800;font-size:27px;color:var(--orange-deep);line-height:1;margin-left:5px}
+  .plan .pl-price .v small{font-size:11px;font-weight:700;margin-left:1px}
+  .plan .pl-badge{position:absolute;top:-11px;left:16px;font-family:var(--f-head);font-weight:900;font-size:10.5px;color:#fff;
+    background:var(--orange-deep);border-radius:999px;padding:3px 12px;letter-spacing:.04em}
+  .coupon{margin:22px auto 0;max-width:370px;background:#fff;border:2px dashed var(--orange);border-radius:16px;
+    padding:18px 16px;text-align:center;box-shadow:0 10px 26px rgba(217,112,10,.18)}
+  .coupon .clbl{font-family:var(--f-head);font-weight:900;font-size:12.5px;color:var(--orange-deep);letter-spacing:.04em}
+  .coupon .crow{display:flex;align-items:center;gap:9px;justify-content:center;margin-top:11px}
+  .coupon .code{font-family:var(--f-num);font-weight:800;font-size:26px;letter-spacing:.14em;color:var(--ink);
+    background:var(--wash);border:1.5px solid var(--line);border-radius:11px;padding:8px 16px}
+  .coupon .copy{font-family:var(--f-head);font-weight:900;font-size:12px;color:#fff;background:linear-gradient(135deg,#FF9D1C,#E0760A);
+    border:none;border-radius:11px;padding:13px 15px;cursor:pointer;white-space:nowrap;box-shadow:0 6px 14px rgba(217,112,10,.36)}
+  .coupon .copy.done{background:#3F9A52;box-shadow:0 6px 14px rgba(63,154,82,.36)}
+  .coupon .chow{margin-top:13px;font-size:11px;color:var(--ink-soft);line-height:1.85;text-align:left}
+  .coupon .chow b{color:var(--orange-deep);font-family:var(--f-num);font-weight:800;margin-right:1px}
+
   /* ===== sticky cta ===== */
   .stick{position:fixed;left:50%;bottom:0;z-index:80;width:100%;max-width:var(--maxw);
     background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:2px solid var(--wash2);
@@ -355,8 +380,8 @@
 
   <!-- OFFER BAR -->
   <div class="offer">
-    <span>初回限定</span><span class="b">¥3,999</span>
-    <span class="sep"></span><span>送料一律 ¥500</span>
+    <span>クーポンで</span><span class="b">定期便¥2,498</span>
+    <span class="sep"></span><span>通常¥3,999</span>
   </div>
 
   <!-- ===== HERO ===== -->
@@ -369,9 +394,9 @@
       <div class="formula"><span class="t">アミノ酸</span><span class="x">×</span><span class="t">タンパク質</span><span class="x">×</span><span class="t">クエン酸</span><span class="x">×</span><span class="t">グルタミン</span></div>
       <p class="sub">部活も、仕事も、トレーニングも。<br>4つの栄養を、毎日の一杯で。</p>
       <div class="cta-box">
-        <div class="cta-lead lt big"><span><span class="em">初回限定</span>でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <div class="cta-lead lt big"><span><span class="em">クーポン</span>で定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
-          <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で購入する</span><span class="arw">→</span>
+          <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
       </div>
     </div>
@@ -413,8 +438,8 @@
         <div class="vhead">
           <img class="vava" src="voice-2.png" alt="整骨院 院長・柔道整復師" />
           <div class="vmeta">
-            <div class="vname">院長 <span>(33)</span></div>
-            <div class="vrole">整骨院R.／柔道整復師</div>
+            <div class="vname">西さん <span>(33)</span></div>
+            <div class="vrole">整骨院R. 院長／柔道整復師</div>
           </div>
         </div>
         <p class="vquote">一日中立ちっぱなしで施術する仕事なので、夕方の疲れが残りにくかったように感じています。個人的には翌朝の目覚めも軽い気がして、プロとして長く続けていきたい一杯です。</p>
@@ -423,7 +448,7 @@
         <div class="vhead">
           <img class="vava" src="voice-3.png" alt="ボディビル" />
           <div class="vmeta">
-            <div class="vname">トレーニー <span>(20)</span></div>
+            <div class="vname">田中さん <span>(20)</span></div>
             <div class="vrole">ボディビル</div>
           </div>
         </div>
@@ -561,7 +586,7 @@
       </div>
       <div style="margin-top:26px">
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
-          <span>初回 <span class="pr">¥3,999</span> で試してみる</span><span class="arw">→</span>
+          <span>クーポンで<span class="pr">¥2,498</span>で試す</span><span class="arw">→</span>
         </a>
       </div>
     </div>
@@ -608,24 +633,50 @@
 
   <!-- ===== PRICE ===== -->
   <section class="price fx-in" style="padding-top:56px;padding-bottom:56px">
-    <div class="rv">
-      <span class="ribbon">初回限定スペシャルプライス</span>
-      <div class="was">2回目以降 <s>¥4,500</s>（税込）のところ、<b style="color:var(--orange-deep);font-weight:900">初回限定</b>で</div>
-      <div class="pp"><span class="yen">¥</span><span class="big">3,999</span><span class="tax">税込</span></div>
+    <div class="cen rv">
+      <span class="kicker cen">Price</span>
+      <h2 class="h" style="margin-top:14px">クーポンで、<span class="o">いちばんお得に。</span></h2>
     </div>
-    <div class="meta rv">
+
+    <div class="plans rv">
+      <div class="plan">
+        <div class="pl-name">単品（1回のお届け）<small>まずは試したい方に</small></div>
+        <div class="pl-price"><s>¥5,000</s><span class="v">¥3,499<small>税込</small></span></div>
+      </div>
+      <div class="plan best">
+        <span class="pl-badge">いちばんお得</span>
+        <div class="pl-name">定期便（毎月お届け）<small>続けて習慣にしたい方に</small></div>
+        <div class="pl-price"><s>¥3,999</s><span class="v">¥2,498<small>税込</small></span></div>
+      </div>
+    </div>
+
+    <div class="coupon rv">
+      <div class="clbl">＼ このページ限定クーポン ／</div>
+      <div class="crow">
+        <span class="code" id="coupon-code">8JU5H93Y</span>
+        <button class="copy" id="coupon-copy" type="button">コピー</button>
+      </div>
+      <div class="chow">
+        <b>①</b> コードをコピー<br>
+        <b>②</b> 下のボタンから購入手続きへ<br>
+        <b>③</b> カート／お支払い画面の「クーポン」欄に貼り付けて適用
+      </div>
+    </div>
+
+    <div class="meta rv" style="margin-top:20px">
       <div><span>内容量</span><b>500g（約23食分）</b></div>
-      <div><span>お届け</span><b>毎月1回の定期便</b></div>
+      <div><span>お届け</span><b>毎月1回の定期便（単品も選べます）</b></div>
       <div><span>送料</span><b>全国一律 ¥500</b></div>
       <div><span>継続条件</span><b>3回／以降いつでも解約可</b></div>
     </div>
+
     <div class="cta-box rv">
-      <div class="cta-lead"><span class="off">約11%OFF</span><span><span class="em">初回限定</span> <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+      <div class="cta-lead"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
       <a class="cta" href="https://mealpower.base.shop/items/139813936">
-        <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>で申し込む</span><span class="arw">→</span>
+        <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で申し込む</span><span class="arw">→</span>
       </a>
     </div>
-    <p class="fine rv">※本定期便は3回（3ヶ月）の継続が条件です。4回目以降はマイページからいつでも解約・変更できます。価格は税込。開封後の返品はお受けできません。</p>
+    <p class="fine rv">※表示の割引は当ページ限定・期間限定のクーポンによるものです。割引価格はクーポンコード入力後に反映されます（適用前は通常価格で表示されます）。本定期便は3回（3ヶ月）の継続が条件で、4回目以降はマイページからいつでも解約・変更できます。価格は税込・予告なく変更となる場合があります。開封後の返品はお受けできません。</p>
   </section>
 
   <!-- ===== FAQ ===== -->
@@ -648,12 +699,12 @@
       <span class="eyebrow">Recovery Pro</span>
       <h2 class="h">動いた日も、休む日も。<br><span class="o">補給は、一杯から。</span></h2>
       <div class="cta-box">
-        <div class="cta-lead lt"><span class="off">約11%OFF</span><span><span class="em">初回限定</span>でお得に <s>¥4,500</s> → <span class="now">¥3,999</span></span></div>
+        <div class="cta-lead lt"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
-          <span class="cta-main"><span class="pr">¥3,999</span><small>税込</small>ではじめる</span><span class="arw">→</span>
+          <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>ではじめる</span><span class="arw">→</span>
         </a>
       </div>
-      <p class="cta-note">定期便 ／ 送料¥500 ／ 日本国内製造</p>
+      <p class="cta-note">クーポンコード 8JU5H93Y ／ 送料¥500 ／ 日本国内製造</p>
     </div>
   </section>
 
@@ -673,7 +724,7 @@
 
 <!-- sticky cta -->
 <a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
-  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">初回限定 約11%OFF</b> ／ <s style="opacity:.7">¥4,500</s></div><div class="l2"><span class="y">¥</span>3,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <div class="i"><div class="l1"><b style="color:var(--orange-deep)">クーポンで定期便</b> ／ <s style="opacity:.7">¥3,999</s></div><div class="l2"><span class="y">¥</span>2,498<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
   <span class="sb">申し込む →</span>
 </a>
 
@@ -681,7 +732,7 @@
   // CTAクリック計測（BASE購入リンク）
   document.querySelectorAll('a[href*="mealpower.base.shop"]').forEach(a=>{
     a.addEventListener('click',()=>{
-      if(window.fbq) fbq('track','InitiateCheckout',{content_name:'Recovery Pro 定期便',value:3999,currency:'JPY'});
+      if(window.fbq) fbq('track','InitiateCheckout',{content_name:'Recovery Pro 定期便',value:2498,currency:'JPY'});
       if(window.clarity) clarity('event','cta_click');
     });
   });
@@ -689,6 +740,18 @@
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   const stick=document.getElementById('stick'),hero=document.querySelector('.hero');
   new IntersectionObserver((es)=>{es.forEach(e=>stick.classList.toggle('show',!e.isIntersecting))},{threshold:0}).observe(hero);
+  // クーポンコードのコピー
+  const cbtn=document.getElementById('coupon-copy');
+  if(cbtn){cbtn.addEventListener('click',async()=>{
+    const code='8JU5H93Y';
+    try{await navigator.clipboard.writeText(code);}
+    catch(e){const el=document.getElementById('coupon-code'),r=document.createRange();r.selectNode(el);
+      const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')}catch(_){}s.removeAllRanges();}
+    cbtn.textContent='コピーしました';cbtn.classList.add('done');
+    if(window.fbq)fbq('track','Lead',{content_name:'coupon_copy'});
+    if(window.clarity)clarity('event','coupon_copy');
+    setTimeout(()=>{cbtn.textContent='コピー';cbtn.classList.remove('done');},2200);
+  });}
 </script>
 </body>
 </html>
