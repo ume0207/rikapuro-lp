@@ -166,6 +166,8 @@
   .shot .amts .a .n small{font-family:var(--f-head);font-weight:700;font-size:11px;margin-left:2px}
   .shot .amts .a .k{font-size:10.5px;color:rgba(255,255,255,.85);margin-top:4px;letter-spacing:.04em;text-shadow:var(--tsh)}
   /* こんな方におすすめ */
+  .fx.reco{min-height:auto}
+  .fx.reco .fx-in{padding-top:40px}
   .fx.reco::before{background:linear-gradient(180deg,rgba(40,20,3,.56) 0%,rgba(44,22,3,.48) 38%,rgba(34,17,2,.76) 100%)}
   .reco-list{margin-top:18px}
   .reco-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.24);
@@ -314,6 +316,8 @@
   .cmini .cb{font-family:var(--f-head);font-weight:900;font-size:11px;color:#fff;background:linear-gradient(135deg,#FF9D1C,#E0760A);
     border:none;border-radius:10px;padding:10px 13px;cursor:pointer;white-space:nowrap;box-shadow:0 5px 12px rgba(217,112,10,.34)}
   .cmini .cb.done{background:#3F9A52;box-shadow:0 5px 12px rgba(63,154,82,.34)}
+  .cmini-note{margin:9px auto 0;max-width:400px;text-align:center;font-size:10.5px;font-weight:700;
+    color:rgba(255,255,255,.92);text-shadow:var(--tsh);line-height:1.6}
 
   /* ===== sticky cta ===== */
   .stick{position:fixed;left:50%;bottom:0;z-index:80;width:100%;max-width:var(--maxw);
@@ -346,8 +350,8 @@
   .vbody{flex:1;min-width:0;padding:15px 16px;display:flex;flex-direction:column;justify-content:center;position:relative}
   .vbody .vq{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:40px;color:var(--orange);
     line-height:.5;height:15px;opacity:.5}
-  .vbody .vquote{font-size:11.5px;line-height:1.82;color:var(--ink);margin:7px 0 10px;font-weight:500;
-    display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+  .vbody .vquote{font-size:11.5px;line-height:1.8;color:var(--ink);margin:6px 0 10px;font-weight:500;
+    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
   .vbody .vname{font-family:var(--f-head);font-weight:900;font-size:14px;color:var(--ink);line-height:1.3;
     padding-top:9px;border-top:1.5px solid var(--line);display:flex;align-items:center;gap:6px}
   .vbody .vname::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none}
@@ -423,6 +427,7 @@
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
         <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
+        <p class="cmini-note">通常購入（単品）も同じクーポンが使えます ／ 期間限定・お一人様1回限り</p>
       </div>
     </div>
   </header>
@@ -453,7 +458,7 @@
         <div class="vimg"><img src="vimg-1.png" alt="野球・投手 佐々木さん 投球" /></div>
         <div class="vbody">
           <div class="vq">“</div>
-          <p class="vquote">連投や練習量が増える時期もありますが、毎日続けてからは朝起きやすくなった気がします。練習後に水で溶かすのが自分のルーティンです。</p>
+          <p class="vquote">連投が続く時期も、毎日続けてからは朝起きやすくなった気がします。練習後の自分の習慣です。</p>
           <div class="vname">佐々木さん <span>(21)</span></div>
           <div class="vrole">野球・投手／BCL福島レッドホープス</div>
         </div>
@@ -462,7 +467,7 @@
         <div class="vimg"><img src="vimg-2.png" alt="整骨院R. 院長・柔道整復師 施術" /></div>
         <div class="vbody">
           <div class="vq">“</div>
-          <p class="vquote">一日中立ちっぱなしの施術仕事ですが、夕方の疲れが残りにくく感じています。個人的には翌朝の目覚めも軽い気がして、プロとして続けたい一杯です。</p>
+          <p class="vquote">立ちっぱなしの施術仕事でも、夕方の疲れが残りにくく感じます。翌朝の目覚めも軽い気がします。</p>
           <div class="vname">西さん <span>(33)</span></div>
           <div class="vrole">整骨院R. 院長／柔道整復師</div>
         </div>
@@ -471,7 +476,7 @@
         <div class="vimg"><img src="vimg-3.png" alt="ボディビル 田中さん" /></div>
         <div class="vbody">
           <div class="vq">“</div>
-          <p class="vquote">増量期はトレ後の補給が大事なので習慣にしています。続けるうちに体が疲れにくくなった気がして、筋肉も大きく強くなった気がします。</p>
+          <p class="vquote">増量期はトレ後の補給が大事。続けるうちに体が疲れにくく、筋肉も大きく強くなった気がします。</p>
           <div class="vname">田中さん <span>(20)</span></div>
           <div class="vrole">ボディビル</div>
         </div>
@@ -614,6 +619,7 @@
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
         <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
+        <p class="cmini-note">通常購入（単品）も同じクーポンが使えます ／ 期間限定・お一人様1回限り</p>
       </div>
     </div>
   </section>
@@ -688,6 +694,7 @@
         <b>②</b> 下のボタンから購入手続きへ<br>
         <b>③</b> カート／お支払い画面の「クーポン」欄に貼り付けて適用
       </div>
+      <div style="margin-top:12px;padding-top:11px;border-top:1px solid var(--line);font-size:11px;font-weight:700;color:var(--orange-deep);line-height:1.65;text-align:center">単品（通常購入）も同じクーポンが使えます<br>期間限定・お一人様1回限り</div>
     </div>
 
     <div class="meta rv" style="margin-top:20px">
@@ -731,6 +738,7 @@
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
         <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
+        <p class="cmini-note">通常購入（単品）も同じクーポンが使えます ／ 期間限定・お一人様1回限り</p>
       </div>
       <p class="cta-note">送料¥500 ／ 日本国内製造</p>
     </div>
