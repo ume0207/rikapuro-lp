@@ -339,7 +339,7 @@
     filter:blur(20px) saturate(1.05)}
   .voice>*{position:relative;z-index:1}
   .vlist{margin-top:18px;display:flex;flex-direction:column;gap:15px}
-  .vitem{display:flex;height:184px;background:#fff;border-radius:22px;overflow:hidden;
+  .vitem{display:flex;min-height:172px;background:#fff;border-radius:22px;overflow:hidden;
     box-shadow:0 16px 36px rgba(217,112,10,.15),0 2px 6px rgba(48,24,4,.07);border:1px solid #F4E8D4}
   .vimg{position:relative;width:46%;flex:none;background:#EDE3D2;overflow:hidden}
   .vimg img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(1.26) saturate(.9) contrast(.95)}
@@ -350,16 +350,14 @@
   .vbody{flex:1;min-width:0;padding:15px 16px;display:flex;flex-direction:column;justify-content:center;position:relative}
   .vbody .vq{font-family:var(--f-serif);font-style:italic;font-weight:600;font-size:40px;color:var(--orange);
     line-height:.5;height:15px;opacity:.5}
-  .vbody .vquote{font-size:11.5px;line-height:1.8;color:var(--ink);margin:6px 0 10px;font-weight:500;
-    display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .vbody .vquote{font-size:11.5px;line-height:1.82;color:var(--ink);margin:6px 0 10px;font-weight:500}
   .vbody .vname{font-family:var(--f-head);font-weight:900;font-size:14px;color:var(--ink);line-height:1.3;
     padding-top:9px;border-top:1.5px solid var(--line);display:flex;align-items:center;gap:6px}
   .vbody .vname::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none}
   .vbody .vname span{font-weight:700;color:var(--ink-soft);font-size:11.5px;margin-left:1px}
   .vbody .vrole{font-size:10px;color:var(--orange-deep);font-weight:700;margin-top:3px;line-height:1.35;padding-left:13px}
   .vnote{margin-top:20px;font-size:10.5px;color:var(--ink-soft);line-height:1.7;text-align:center}
-  @media (max-width:380px){.vitem{height:176px}.vbody{padding:13px}.vbody .vquote{font-size:11px}}
-  @media (max-width:380px){.vbody{padding:14px 13px}.vbody .vquote{font-size:11.5px}.vimg{width:42%}}
+  @media (max-width:380px){.vitem{min-height:166px}.vbody{padding:13px}.vbody .vquote{font-size:11px}.vimg{width:42%}}
 
   /* ===== グルタミン解説（画像の上に白文字） ===== */
   .glu h2.h{color:#fff}.glu h2.h .o{color:var(--yellow)}
