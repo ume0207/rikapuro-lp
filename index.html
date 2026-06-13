@@ -304,6 +304,15 @@
   .coupon .chow{margin-top:13px;font-size:11px;color:var(--ink-soft);line-height:1.85;text-align:left}
   .coupon .chow b{color:var(--orange-deep);font-family:var(--f-num);font-weight:800;margin-right:1px}
 
+  /* CTA下の大きいクーポン表示（どの背景でも読める白ボックス） */
+  .cmini{display:flex;align-items:center;gap:9px;justify-content:center;width:100%;max-width:400px;margin:14px auto 0;
+    background:#fff;border:2px dashed var(--orange);border-radius:14px;padding:11px 13px;box-shadow:0 10px 24px rgba(217,112,10,.22)}
+  .cmini .cl{font-family:var(--f-head);font-weight:900;font-size:10px;color:var(--orange-deep);white-space:nowrap;line-height:1.25;text-align:center}
+  .cmini .cc{font-family:var(--f-num);font-weight:800;font-size:25px;letter-spacing:.12em;color:var(--ink);flex:1;text-align:center;min-width:0}
+  .cmini .cb{font-family:var(--f-head);font-weight:900;font-size:11px;color:#fff;background:linear-gradient(135deg,#FF9D1C,#E0760A);
+    border:none;border-radius:10px;padding:10px 13px;cursor:pointer;white-space:nowrap;box-shadow:0 5px 12px rgba(217,112,10,.34)}
+  .cmini .cb.done{background:#3F9A52;box-shadow:0 5px 12px rgba(63,154,82,.34)}
+
   /* ===== sticky cta ===== */
   .stick{position:fixed;left:50%;bottom:0;z-index:80;width:100%;max-width:var(--maxw);
     background:rgba(255,253,248,.96);backdrop-filter:blur(8px);border-top:2px solid var(--wash2);
@@ -335,35 +344,36 @@
   .vnote{margin-top:20px;font-size:10.5px;color:var(--ink-soft);line-height:1.7;text-align:center}
   @media (max-width:380px){.vbody{padding:14px 13px}.vbody .vquote{font-size:11.5px}.vimg{width:42%}}
 
-  /* ===== グルタミン解説 ===== */
-  .glu{background:linear-gradient(180deg,#FFFDF8,var(--wash))}
-  .glu .gintro{font-size:13px;line-height:1.95;color:var(--ink);margin-top:14px;text-align:center}
-  .glu .gintro b{color:var(--orange-deep);font-weight:900}
-  .glu-sub{font-family:var(--f-head);font-weight:900;font-size:15px;color:var(--ink);margin:30px 0 2px;
-    display:flex;align-items:center;gap:9px}
-  .glu-sub::before{content:"";width:20px;height:3px;background:var(--orange);border-radius:2px;flex:none}
+  /* ===== グルタミン解説（画像の上に白文字） ===== */
+  .glu h2.h{color:#fff}.glu h2.h .o{color:var(--yellow)}
+  .glu .kicker{color:var(--yellow)}.glu .kicker::after{background:var(--yellow)}
+  .glu .gintro{font-size:13px;line-height:1.95;color:rgba(255,255,255,.94);margin-top:14px;text-align:center;text-shadow:var(--tsh)}
+  .glu .gintro b{color:var(--yellow);font-weight:900}
+  .glu-sub{font-family:var(--f-head);font-weight:900;font-size:15px;color:#fff;margin:30px 0 2px;
+    display:flex;align-items:center;gap:9px;text-shadow:var(--tsh)}
+  .glu-sub::before{content:"";width:20px;height:3px;background:var(--yellow);border-radius:2px;flex:none}
   .glu-works{margin-top:10px}
-  .glu-work{display:flex;gap:14px;align-items:center;padding:13px 0;border-top:1px solid var(--line)}
+  .glu-work{display:flex;gap:14px;align-items:center;padding:13px 0;border-top:1px solid rgba(255,255,255,.24)}
   .glu-work:first-child{border-top:none}
-  .glu-work .gn{font-family:var(--f-num);font-weight:800;font-size:25px;color:var(--orange);line-height:1;width:30px;flex:none;text-align:center}
-  .glu-work .gt{font-family:var(--f-head);font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.5}
-  .glu-work .gt b{color:var(--orange-deep);font-weight:900}
+  .glu-work .gn{font-family:var(--f-num);font-weight:800;font-size:25px;color:var(--yellow);line-height:1;width:30px;flex:none;text-align:center;text-shadow:var(--tsh)}
+  .glu-work .gt{font-family:var(--f-head);font-weight:700;font-size:13.5px;color:#fff;line-height:1.5;text-shadow:var(--tsh)}
+  .glu-work .gt b{color:var(--yellow);font-weight:900}
   .glu-tag{display:inline-block;margin-top:18px;font-family:var(--f-head);font-weight:900;font-size:12.5px;color:#fff;
-    background:linear-gradient(135deg,#FFA92E,#E0760A);border-radius:999px;padding:8px 18px;box-shadow:0 6px 16px rgba(217,112,10,.3)}
-  .glu-box{margin-top:12px;background:#FFF1DE;border-radius:14px;padding:16px 18px;border-left:4px solid var(--orange)}
-  .glu-box .lbl{font-family:var(--f-head);font-weight:900;font-size:11px;letter-spacing:.08em;color:var(--orange-deep);margin-bottom:7px}
-  .glu-box p{font-size:12.5px;line-height:1.95;color:var(--ink)}
-  .glu-box p b{color:var(--orange-deep);font-weight:900}
+    background:linear-gradient(135deg,#FFA92E,#E0760A);border-radius:999px;padding:8px 18px;box-shadow:0 6px 16px rgba(0,0,0,.3)}
+  .glu-box{margin-top:12px;background:rgba(20,12,4,.46);backdrop-filter:blur(3px);border-radius:14px;padding:16px 18px;border-left:4px solid var(--yellow)}
+  .glu-box .lbl{font-family:var(--f-head);font-weight:900;font-size:11px;letter-spacing:.08em;color:var(--yellow);margin-bottom:7px}
+  .glu-box p{font-size:12.5px;line-height:1.95;color:#fff;text-shadow:var(--tsh)}
+  .glu-box p b{color:var(--yellow);font-weight:900}
   .glu-flow{margin-top:14px;text-align:center}
-  .glu-flow .fstep{font-family:var(--f-head);font-weight:700;font-size:13px;color:var(--ink);line-height:1.65}
-  .glu-flow .fstep.dim{color:var(--ink-soft);font-weight:500;font-size:12.5px}
-  .glu-flow .fstep.hl{font-weight:900;color:var(--orange-deep);font-size:14px}
-  .glu-flow .far{color:var(--orange);font-family:var(--f-num);font-weight:800;font-size:20px;margin:5px 0;line-height:1}
+  .glu-flow .fstep{font-family:var(--f-head);font-weight:700;font-size:13px;color:#fff;line-height:1.65;text-shadow:var(--tsh)}
+  .glu-flow .fstep.dim{color:rgba(255,255,255,.82);font-weight:500;font-size:12.5px}
+  .glu-flow .fstep.hl{font-weight:900;color:var(--yellow);font-size:14px}
+  .glu-flow .far{color:var(--yellow);font-family:var(--f-num);font-weight:800;font-size:20px;margin:5px 0;line-height:1}
   .glu-flow .fpill{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:12px;color:#fff;
-    background:var(--orange-deep);border-radius:999px;padding:5px 14px;margin:6px 0}
-  .glu-close{margin-top:16px;text-align:center;font-family:var(--f-head);font-weight:900;font-size:13.5px;color:var(--ink);line-height:1.7}
-  .glu-close b{color:var(--orange-deep)}
-  .gnote{margin-top:18px;font-size:10px;color:var(--ink-soft);line-height:1.7;text-align:center}
+    background:var(--orange-deep);border-radius:999px;padding:5px 14px;margin:6px 0;box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .glu-close{margin-top:16px;text-align:center;font-family:var(--f-head);font-weight:900;font-size:13.5px;color:#fff;line-height:1.7;text-shadow:var(--tsh)}
+  .glu-close b{color:var(--yellow)}
+  .gnote{margin-top:18px;font-size:10px;color:rgba(255,255,255,.8);line-height:1.7;text-align:center;text-shadow:var(--tsh)}
 
   /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
@@ -399,6 +409,7 @@
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
           <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
+        <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
       </div>
     </div>
   </header>
@@ -486,19 +497,19 @@
       <div class="cen rv" style="margin-bottom:22px">
         <span class="kicker cen">The Formula</span>
         <h2 class="h" style="margin-top:14px">4つの力を、<span class="o">この一杯に。</span></h2>
-        <p class="lead">アミノ酸・タンパク質・クエン酸・L-グルタミン。<br>動く毎日に必要な栄養を、まとめて補えます。</p>
-      </div>
-      <div class="ing rv">
-        <div><div class="nm">タンパク質</div><div class="en">Protein</div><div class="ds">体づくりの材料。1杯あたり5g。</div></div>
-        <div class="r">5<small>g</small></div>
+        <p class="lead">クエン酸・タンパク質（L-グルタミン）・マルトデキストリン・ビタミン。<br>動く毎日に必要な栄養を、まとめて補えます。</p>
       </div>
       <div class="ing rv">
         <div><div class="nm">クエン酸</div><div class="en">Citric Acid</div><div class="ds">柑橘由来。運動後のすっきりをサポート。</div></div>
         <div class="r">4,200<small>mg</small></div>
       </div>
       <div class="ing rv">
-        <div><div class="nm">L-グルタミン</div><div class="en">L-Glutamine</div><div class="ds">体内に多いアミノ酸。コンディションの土台。</div></div>
+        <div><div class="nm">タンパク質（L-グルタミン）</div><div class="en">Protein / L-Glutamine</div><div class="ds">体づくりの材料となるアミノ酸。コンディションの土台に。</div></div>
         <div class="r">5,040<small>mg</small></div>
+      </div>
+      <div class="ing rv">
+        <div><div class="nm">マルトデキストリン</div><div class="en">Maltodextrin</div><div class="ds">すばやくエネルギーになる糖質。動いた直後の素早いエネルギー補給に。</div></div>
+        <div class="r">11<small>g</small></div>
       </div>
       <div class="ing rv">
         <div><div class="nm">11種のビタミン</div><div class="en">Vitamins</div><div class="ds">A・D・E・B群・C ほか。立て直しを底上げ。</div></div>
@@ -530,7 +541,8 @@
   </section>
 
   <!-- ===== グルタミン解説（Instagram由来） ===== -->
-  <section class="glu fx-in" style="padding-top:54px;padding-bottom:54px">
+  <section class="fx glu sc-heavy" style="background-image:url('gen-hero-supplement.png');background-position:center 26%">
+   <div class="fx-in" style="padding-top:54px;padding-bottom:54px">
     <div class="cen rv">
       <span class="kicker cen">About Glutamine</span>
       <h2 class="h" style="margin-top:14px">グルタミンって、<span class="o">なに？</span></h2>
@@ -569,6 +581,7 @@
     </div>
 
     <p class="gnote rv">※グルタミンという成分に関する一般的な情報です。本品は食品であり、特定の疾病の診断・治療・予防や効果を保証するものではありません。</p>
+   </div>
   </section>
 
   <!-- ===== 成分教育3: 支える材料 ===== -->
@@ -584,8 +597,9 @@
       </div>
       <div style="margin-top:26px">
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
-          <span>クーポンで<span class="pr">¥2,498</span>で試す</span><span class="arw">→</span>
+          <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
+        <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
       </div>
     </div>
   </section>
@@ -611,12 +625,12 @@
         <h2 class="h" style="margin-top:14px">水に溶かして、<span class="o">ごくっと。</span></h2>
       </div>
       <div class="steps rv">
-        <div class="stp"><div class="n">1</div><div class="t">すくう</div><div class="d">約21g</div></div>
-        <div class="stp"><div class="n">2</div><div class="t">溶かす</div><div class="d">水150〜200ml</div></div>
-        <div class="stp"><div class="n">3</div><div class="t">飲む</div><div class="d">1日1杯</div></div>
+        <div class="stp"><div class="n">1</div><div class="t">すくう</div><div class="d">すり切り2杯</div></div>
+        <div class="stp"><div class="n">2</div><div class="t">溶かす</div><div class="d">水300〜400ml</div></div>
+        <div class="stp"><div class="n">3</div><div class="t">飲む</div><div class="d">1日の目安2杯</div></div>
       </div>
       <div class="timing rv"><span>運動後30分以内</span><span>就寝前</span><span>朝のスタートに</span></div>
-      <p class="hownote rv">運動後は、栄養補給のゴールデンタイムといわれます。しっかり動いた日はその日のうちに、ゆっくり休みたい日は就寝前や翌朝の習慣に。中学生以下は半量、乳幼児はお控えください。</p>
+      <p class="hownote rv">1日の目安は付属スプーンすり切り2杯。300〜400mlの水によく溶かしてお飲みください。運動後は栄養補給のゴールデンタイムといわれます。しっかり動いた日はその日のうちに、ゆっくり休みたい日は就寝前や翌朝の習慣に。中学生以下は半量、乳幼児はお控えください。</p>
     </div>
   </section>
 
@@ -652,7 +666,7 @@
       <div class="clbl">＼ このページ限定クーポン ／</div>
       <div class="crow">
         <span class="code" id="coupon-code">8JU5H93Y</span>
-        <button class="copy" id="coupon-copy" type="button">コピー</button>
+        <button class="copy js-copy-coupon" id="coupon-copy" type="button">コピー</button>
       </div>
       <div class="chow">
         <b>①</b> コードをコピー<br>
@@ -671,7 +685,7 @@
     <div class="cta-box rv">
       <div class="cta-lead"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
       <a class="cta" href="https://mealpower.base.shop/items/139813936">
-        <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で申し込む</span><span class="arw">→</span>
+        <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
       </a>
     </div>
     <p class="fine rv">※表示の割引は当ページ限定・期間限定のクーポンによるものです。割引価格はクーポンコード入力後に反映されます（適用前は通常価格で表示されます）。本定期便は3回（3ヶ月）の継続が条件で、4回目以降はマイページからいつでも解約・変更できます。価格は税込・予告なく変更となる場合があります。開封後の返品はお受けできません。</p>
@@ -683,9 +697,9 @@
       <span class="kicker cen">FAQ</span>
       <h2 class="h" style="margin-top:14px">よくある質問。</h2>
     </div>
-    <details class="qa rv"><summary><span class="q">Q</span>いつ飲むのがおすすめ？</summary><div class="a">運動の前後、または就寝前に。1日1杯を目安に、しっかり動いた日やがんばった日の習慣として取り入れてください。タイミングは生活に合わせて大丈夫です。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>いつ飲むのがおすすめ？</summary><div class="a">付属スプーンすり切り2杯を300〜400mlの水に溶かして、1日1回を目安に。運動の前後や就寝前、しっかり動いた日やがんばった日の習慣として取り入れてください。タイミングは生活に合わせて大丈夫です。</div></details>
     <details class="qa rv"><summary><span class="q">Q</span>プロテインと一緒に飲んでもいい？</summary><div class="a">役割が違うので併用いただけます。気になる場合はタイミングをずらしてもOK。タンパク質補給に、クエン酸・グルタミンの補給を足すイメージでお使いください。</div></details>
-    <details class="qa rv"><summary><span class="q">Q</span>どんな味？飲みやすい？</summary><div class="a">爽やかな柑橘系の酸味で、運動後でもごくごく飲みやすい味わいです。150〜200mlの水によく溶かしてどうぞ。脂質はほぼ0です。</div></details>
+    <details class="qa rv"><summary><span class="q">Q</span>どんな味？飲みやすい？</summary><div class="a">爽やかな柑橘系の酸味で、運動後でもごくごく飲みやすい味わいです。すり切り2杯を300〜400mlの水によく溶かしてどうぞ。脂質はほぼ0です。</div></details>
     <details class="qa rv"><summary><span class="q">Q</span>定期便はいつ解約できる？</summary><div class="a">3回（3ヶ月）の継続が条件です。4回目以降はマイページからいつでも解約・お届け周期の変更ができます。継続条件は申し込み前にご確認ください。</div></details>
     <details class="qa rv"><summary><span class="q">Q</span>子どもや妊娠中でも飲める？</summary><div class="a">中学生以下は半量を目安に、乳幼児はお控えください。妊娠を希望・妊娠初期の方は用量を守って。ご不安な場合は医師にご相談ください。</div></details>
     <details class="qa rv"><summary><span class="q">Q</span>届くまでどれくらい？</summary><div class="a">通常1〜3営業日以内に発送します（ヤマト運輸 宅急便コンパクト）。2回目以降は毎月1回、自動でお届けします。</div></details>
@@ -699,10 +713,11 @@
       <div class="cta-box">
         <div class="cta-lead lt"><span class="off">クーポン適用</span><span>定期便 <s>¥3,999</s> → <span class="now">¥2,498</span></span></div>
         <a class="cta" href="https://mealpower.base.shop/items/139813936">
-          <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>ではじめる</span><span class="arw">→</span>
+          <span class="cta-main"><span class="pr">¥2,498</span><small>税込</small>で購入する</span><span class="arw">→</span>
         </a>
+        <div class="cmini"><span class="cl">クーポン<br>コード</span><span class="cc">8JU5H93Y</span><button class="cb js-copy-coupon" type="button">コピー</button></div>
       </div>
-      <p class="cta-note">クーポンコード 8JU5H93Y ／ 送料¥500 ／ 日本国内製造</p>
+      <p class="cta-note">送料¥500 ／ 日本国内製造</p>
     </div>
   </section>
 
@@ -738,18 +753,19 @@
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   const stick=document.getElementById('stick'),hero=document.querySelector('.hero');
   new IntersectionObserver((es)=>{es.forEach(e=>stick.classList.toggle('show',!e.isIntersecting))},{threshold:0}).observe(hero);
-  // クーポンコードのコピー
-  const cbtn=document.getElementById('coupon-copy');
-  if(cbtn){cbtn.addEventListener('click',async()=>{
-    const code='8JU5H93Y';
-    try{await navigator.clipboard.writeText(code);}
-    catch(e){const el=document.getElementById('coupon-code'),r=document.createRange();r.selectNode(el);
-      const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')}catch(_){}s.removeAllRanges();}
-    cbtn.textContent='コピーしました';cbtn.classList.add('done');
-    if(window.fbq)fbq('track','Lead',{content_name:'coupon_copy'});
-    if(window.clarity)clarity('event','coupon_copy');
-    setTimeout(()=>{cbtn.textContent='コピー';cbtn.classList.remove('done');},2200);
-  });}
+  // クーポンコードのコピー（複数ボタン対応）
+  document.querySelectorAll('.js-copy-coupon').forEach((btn)=>{
+    btn.addEventListener('click',async()=>{
+      const code='8JU5H93Y';
+      try{await navigator.clipboard.writeText(code);}
+      catch(e){const ta=document.createElement('textarea');ta.value=code;ta.style.position='fixed';ta.style.opacity='0';
+        document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}document.body.removeChild(ta);}
+      const orig=btn.textContent;btn.textContent='コピーしました';btn.classList.add('done');
+      if(window.fbq)fbq('track','Lead',{content_name:'coupon_copy'});
+      if(window.clarity)clarity('event','coupon_copy');
+      setTimeout(()=>{btn.textContent=orig;btn.classList.remove('done');},2200);
+    });
+  });
 </script>
 </body>
 </html>
