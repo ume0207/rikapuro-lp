@@ -292,6 +292,53 @@
   .stick .sb{flex:none;background:linear-gradient(135deg,#FF9D1C,#E0760A);color:#fff;font-family:var(--f-head);font-weight:900;
     font-size:12.5px;padding:12px 20px;border-radius:999px;white-space:nowrap;box-shadow:0 8px 18px rgba(217,112,10,.4)}
 
+  /* ===== お客様の声 VOICE ===== */
+  .voice{background:linear-gradient(180deg,var(--cream),var(--wash))}
+  .vlist{margin-top:26px}
+  .vitem{padding:22px 0;border-top:1.5px solid var(--line)}
+  .vitem:first-child{border-top:none}
+  .vhead{display:flex;align-items:center;gap:13px}
+  .vava{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:none;
+    border:2.5px solid #fff;box-shadow:0 4px 14px rgba(217,112,10,.28);outline:2px solid var(--orange)}
+  .vmeta .vname{font-family:var(--f-head);font-weight:900;font-size:14px;color:var(--ink);line-height:1.4}
+  .vmeta .vname span{font-weight:700;color:var(--ink-soft);font-size:12px}
+  .vmeta .vrole{font-size:11px;color:var(--ink-soft);margin-top:2px}
+  .vmeta .vq{font-family:var(--f-display);font-size:14px;letter-spacing:.18em;color:var(--orange);margin-top:3px}
+  .vquote{position:relative;margin-top:13px;padding-left:24px;font-size:13px;line-height:1.95;color:var(--ink)}
+  .vquote::before{content:"\201C";position:absolute;left:-2px;top:-8px;font-family:var(--f-serif);
+    font-style:italic;font-size:42px;color:var(--orange);opacity:.55;line-height:1}
+  .vnote{margin-top:22px;font-size:10.5px;color:var(--ink-soft);line-height:1.7;text-align:center}
+
+  /* ===== グルタミン解説 ===== */
+  .glu{background:linear-gradient(180deg,#FFFDF8,var(--wash))}
+  .glu .gintro{font-size:13px;line-height:1.95;color:var(--ink);margin-top:14px;text-align:center}
+  .glu .gintro b{color:var(--orange-deep);font-weight:900}
+  .glu-sub{font-family:var(--f-head);font-weight:900;font-size:15px;color:var(--ink);margin:30px 0 2px;
+    display:flex;align-items:center;gap:9px}
+  .glu-sub::before{content:"";width:20px;height:3px;background:var(--orange);border-radius:2px;flex:none}
+  .glu-works{margin-top:10px}
+  .glu-work{display:flex;gap:14px;align-items:center;padding:13px 0;border-top:1px solid var(--line)}
+  .glu-work:first-child{border-top:none}
+  .glu-work .gn{font-family:var(--f-num);font-weight:800;font-size:25px;color:var(--orange);line-height:1;width:30px;flex:none;text-align:center}
+  .glu-work .gt{font-family:var(--f-head);font-weight:700;font-size:13.5px;color:var(--ink);line-height:1.5}
+  .glu-work .gt b{color:var(--orange-deep);font-weight:900}
+  .glu-tag{display:inline-block;margin-top:18px;font-family:var(--f-head);font-weight:900;font-size:12.5px;color:#fff;
+    background:linear-gradient(135deg,#FFA92E,#E0760A);border-radius:999px;padding:8px 18px;box-shadow:0 6px 16px rgba(217,112,10,.3)}
+  .glu-box{margin-top:12px;background:#FFF1DE;border-radius:14px;padding:16px 18px;border-left:4px solid var(--orange)}
+  .glu-box .lbl{font-family:var(--f-head);font-weight:900;font-size:11px;letter-spacing:.08em;color:var(--orange-deep);margin-bottom:7px}
+  .glu-box p{font-size:12.5px;line-height:1.95;color:var(--ink)}
+  .glu-box p b{color:var(--orange-deep);font-weight:900}
+  .glu-flow{margin-top:14px;text-align:center}
+  .glu-flow .fstep{font-family:var(--f-head);font-weight:700;font-size:13px;color:var(--ink);line-height:1.65}
+  .glu-flow .fstep.dim{color:var(--ink-soft);font-weight:500;font-size:12.5px}
+  .glu-flow .fstep.hl{font-weight:900;color:var(--orange-deep);font-size:14px}
+  .glu-flow .far{color:var(--orange);font-family:var(--f-num);font-weight:800;font-size:20px;margin:5px 0;line-height:1}
+  .glu-flow .fpill{display:inline-block;font-family:var(--f-head);font-weight:900;font-size:12px;color:#fff;
+    background:var(--orange-deep);border-radius:999px;padding:5px 14px;margin:6px 0}
+  .glu-close{margin-top:16px;text-align:center;font-family:var(--f-head);font-weight:900;font-size:13.5px;color:var(--ink);line-height:1.7}
+  .glu-close b{color:var(--orange-deep)}
+  .gnote{margin-top:18px;font-size:10px;color:var(--ink-soft);line-height:1.7;text-align:center}
+
   /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv.in{opacity:1;transform:none}
@@ -343,6 +390,47 @@
         <li><span class="ck">✓</span><span><b>鍛える</b>ことも、<b>休む</b>ことも妥協したくない</span></li>
       </ul>
     </div>
+  </section>
+
+  <!-- ===== お客様の声 VOICE ===== -->
+  <section class="voice fx-in" style="padding-top:54px;padding-bottom:54px">
+    <div class="cen rv">
+      <span class="kicker cen">Voice</span>
+      <h2 class="h" style="margin-top:14px">動く毎日に、<span class="o">選ばれている。</span></h2>
+    </div>
+    <div class="vlist">
+      <div class="vitem rv">
+        <div class="vhead">
+          <img class="vava" src="voice-1.png" alt="野球・投手 佐々木さん" />
+          <div class="vmeta">
+            <div class="vname">佐々木さん <span>(21)</span></div>
+            <div class="vrole">野球・投手／BCL福島レッドホープス</div>
+          </div>
+        </div>
+        <p class="vquote">シーズン中は連投や練習量が増える時期もありますが、毎日続けてからは朝起きやすくなった気がします。練習後に水で溶かして飲むのが、自分のルーティンになっています。</p>
+      </div>
+      <div class="vitem rv">
+        <div class="vhead">
+          <img class="vava" src="voice-2.png" alt="整骨院 院長・柔道整復師" />
+          <div class="vmeta">
+            <div class="vname">院長 <span>(33)</span></div>
+            <div class="vrole">整骨院R.／柔道整復師</div>
+          </div>
+        </div>
+        <p class="vquote">一日中立ちっぱなしで施術する仕事なので、夕方の疲れが残りにくかったように感じています。個人的には翌朝の目覚めも軽い気がして、プロとして長く続けていきたい一杯です。</p>
+      </div>
+      <div class="vitem rv">
+        <div class="vhead">
+          <img class="vava" src="voice-3.png" alt="ボディビル" />
+          <div class="vmeta">
+            <div class="vname">トレーニー <span>(20)</span></div>
+            <div class="vrole">ボディビル</div>
+          </div>
+        </div>
+        <p class="vquote">増量期はトレ後の補給が大事なので習慣にしています。続けるうちに体が疲れにくくなった気がして、筋肉も大きく強くなった気がします。動きやすくなったのも個人的にうれしいです。</p>
+      </div>
+    </div>
+    <p class="vnote rv">※掲載の内容は個人の感想であり、効果・効能を保証するものではありません。</p>
   </section>
 
   <!-- ===== PROBLEM (説明 over image) ===== -->
@@ -402,7 +490,7 @@
       <div class="cap-en">Citric Acid</div>
       <h3>クエン酸<span class="o">4,200mg</span>は、<br>レモン約1個分。</h3>
       <p class="desc">体の中には、食べたものをエネルギーに変える<b>「クエン酸回路」</b>という仕組みがあります。クエン酸は、その名前の由来になった成分。スポーツの現場で、<b>運動後の一杯の定番</b>として長く親しまれてきました。</p>
-      <p class="desc" style="margin-top:9px">カルシウムや鉄などの<b>ミネラルと相性がよい</b>ことでも知られる、Recovery Proの主役成分です。</p>
+      <p class="desc" style="margin-top:9px">カルシウムや鉄などの<b>ミネラルの吸収を助ける</b>ことでも知られる、Recovery Proの主役成分です。</p>
       <div class="facts"><span>1杯で4,200mg</span><span>レモン約1個分</span><span>爽やかな酸味の正体</span></div>
     </div>
   </section>
@@ -416,6 +504,48 @@
       <p class="desc" style="margin-top:9px">だから、動く人ほど意識して補いたい。Recovery Proは1杯で<b>5,040mg</b>。動く毎日の栄養補給を支えます。</p>
       <div class="facts"><span>1杯で5,040mg</span><span>体内最多のアミノ酸</span><span>動く日ほど消費</span></div>
     </div>
+  </section>
+
+  <!-- ===== グルタミン解説（Instagram由来） ===== -->
+  <section class="glu fx-in" style="padding-top:54px;padding-bottom:54px">
+    <div class="cen rv">
+      <span class="kicker cen">About Glutamine</span>
+      <h2 class="h" style="margin-top:14px">グルタミンって、<span class="o">なに？</span></h2>
+      <p class="gintro">たんぱく質をつくるアミノ酸のひとつで、<b>筋肉や血液の中にもっとも多く</b>含まれています。「体調を守るアミノ酸」とも呼ばれる成分です。</p>
+    </div>
+
+    <div class="rv">
+      <div class="glu-sub">3つのはたらき</div>
+      <div class="glu-works">
+        <div class="glu-work"><div class="gn">1</div><div class="gt"><b>エネルギー源</b>として使われる</div></div>
+        <div class="glu-work"><div class="gn">2</div><div class="gt"><b>免疫を保つ細胞</b>（白血球など）の栄養源になる</div></div>
+        <div class="glu-work"><div class="gn">3</div><div class="gt">腸の<b>「バリア機能（体を守る壁）」</b>を守る</div></div>
+      </div>
+      <div class="cen"><span class="glu-tag">“体調を守るアミノ酸”といわれる理由</span></div>
+    </div>
+
+    <div class="rv">
+      <div class="glu-sub">ハードな毎日と、免疫</div>
+      <div class="glu-box">
+        <div class="lbl">RESEARCH ／ 研究より</div>
+        <p>強化合宿中の柔道選手を対象にした研究では、グルタミンを摂ったグループで<b>好中球（免疫を担う細胞）のはたらきが維持され</b>、体調不良のリスクが低い傾向がみられたと報告されています。ハードな練習や疲労で落ちやすい免疫機能の維持に、グルタミンが関わっていると考えられています。</p>
+      </div>
+    </div>
+
+    <div class="rv">
+      <div class="glu-sub">腸を守ることが、体調を守る</div>
+      <p class="gintro" style="margin-top:8px">激しい運動や疲労が続くと、腸の「バリア機能」が弱まりやすくなります。</p>
+      <div class="glu-flow">
+        <div class="fstep dim">激しい運動・疲労が続く</div>
+        <div class="far">↓</div>
+        <span class="fpill">グルタミンを補う</span>
+        <div class="far">↓</div>
+        <div class="fstep hl">腸の粘膜がダメージを受けにくくなるといわれる</div>
+      </div>
+      <p class="glu-close">腸の健康を守ること＝体調を崩しにくくすること。<br>それが<b>免疫を支える</b>ことにもつながります。</p>
+    </div>
+
+    <p class="gnote rv">※グルタミンという成分に関する一般的な情報です。本品は食品であり、特定の疾病の診断・治療・予防や効果を保証するものではありません。</p>
   </section>
 
   <!-- ===== 成分教育3: 支える材料 ===== -->
