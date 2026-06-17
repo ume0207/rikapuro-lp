@@ -360,6 +360,7 @@
   .stick .i .l1{font-size:10px;color:var(--orange-deep);letter-spacing:.02em;white-space:nowrap;font-weight:900;
     display:flex;align-items:center;gap:5px}
   .stick .i .l1::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);flex:none}
+  .stick .i .l1 b{font-family:var(--f-num);font-weight:800;font-style:normal;font-size:14px;color:var(--orange-deep)}
   .stick .i .l2{font-family:var(--f-num);font-weight:800;color:var(--ink);font-size:23px;line-height:1.15;white-space:nowrap;margin-top:1px}
   .stick .i .l2 .y{font-size:14px;color:var(--orange-deep);vertical-align:.12em}
   .stick .i .l2 s{font-family:var(--f-num);font-weight:600;font-size:13px;color:var(--ink-soft);opacity:.7;margin-right:6px}
@@ -835,7 +836,7 @@
 
 <!-- sticky cta -->
 <a class="stick" id="stick" href="https://mealpower.base.shop/items/139813936">
-  <div class="i"><div class="l1">クーポンで定期便・送料無料</div><div class="l2"><s>¥4,500</s><span class="y">¥</span>2,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
+  <div class="i"><div class="l1">残り <b class="cd-m">--</b>:<b class="cd-s">--</b> ・ このページ限定</div><div class="l2"><s>¥4,500</s><span class="y">¥</span>2,999<span style="font-family:var(--f-head);font-size:11px;font-weight:700;color:var(--ink-soft);margin-left:4px">税込</span></div></div>
   <span class="sb">申し込む<span class="a">→</span></span>
 </a>
 
@@ -881,12 +882,14 @@
     let timer;
     function tick(){
       const diff=dl-Date.now();
-      if(diff<=0){blocks.forEach(b=>b.classList.add('ended'));if(timer)clearInterval(timer);return;}
-      const m=Math.floor(diff/60000),s=Math.floor(diff/1000)%60;
-      blocks.forEach((b)=>{
-        const qm=b.querySelector('.cd-m'),qs=b.querySelector('.cd-s');
-        if(qm)qm.textContent=pad(m);if(qs)qs.textContent=pad(s);
-      });
+      if(diff<=0){
+        blocks.forEach(b=>b.classList.add('ended'));
+        const sl=document.querySelector('#stick .l1');if(sl)sl.textContent='このページ限定クーポンは受付終了';
+        if(timer)clearInterval(timer);return;
+      }
+      const m=pad(Math.floor(diff/60000)),s=pad(Math.floor(diff/1000)%60);
+      document.querySelectorAll('.cd-m').forEach(e=>{e.textContent=m;});
+      document.querySelectorAll('.cd-s').forEach(e=>{e.textContent=s;});
     }
     tick();timer=setInterval(tick,1000);
   })();
