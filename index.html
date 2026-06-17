@@ -136,12 +136,11 @@
   .offer .sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.75)}
 
   /* ===== HERO (別フォント = 明朝) ===== */
-  .hero{min-height:96vh;display:flex;flex-direction:column;justify-content:flex-end;background-color:#EAD9C0}
+  .hero{min-height:96vh;display:flex;flex-direction:column;justify-content:space-between;background-color:#EAD9C0}
   .hero::before{background:linear-gradient(180deg,rgba(50,26,4,.56) 0%,rgba(50,26,4,.34) 24%,
     rgba(50,26,4,.16) 50%,rgba(46,24,4,.62) 80%,rgba(40,20,3,.85) 100%)}
   .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
-  .hero-catch{position:absolute;left:0;right:0;top:18%;transform:translateY(-50%);z-index:1;
-    text-align:center;padding:0 20px}
+  .hero-catch{position:relative;z-index:1;text-align:center;padding:80px 20px 0}
   .hero .top .kicker{color:var(--yellow)}.hero .top .kicker::after{background:var(--yellow);margin-left:auto;margin-right:auto}
   .hero-in{position:relative;z-index:1;padding:0 26px 42px;text-align:center}
   .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:clamp(26px,7.6vw,35px);line-height:1.58;
