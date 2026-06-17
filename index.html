@@ -13,7 +13,7 @@
   window.LP_CONFIG = {
     CLARITY_ID: 'x6qnhlzs5u',      /* Microsoft Clarity プロジェクトID（リカプロ LP）*/
     META_PIXEL_ID: '',   /* Meta(Facebook) Pixel ID */
-    COUPON_DEADLINE: '2026-06-30T23:59:59+09:00'  /* クーポン締切（この日時で実際に終了する想定。来訪ごとのリセットはしない）*/
+    COUPON_MINUTES: 10   /* クーポン カウントダウンの分数（来訪者が開いてから。同一セッション内のリロードは継続／新規セッションで再付与）*/
   };
   /* Microsoft Clarity */
   (function(c,l,a,r,i,t,y){
@@ -342,6 +342,10 @@
   /* 写真の上(明色)用 */
   .cdown.lt .cd-lbl{color:#fff;text-shadow:var(--tsh)}.cdown.lt .cd-lbl .lim{color:var(--yellow)}
   .cdown.lt .cd-end{color:#fff;text-shadow:var(--tsh)}
+  .cd-seg.sep{background:none;box-shadow:none;min-width:0;padding:0 1px;display:flex;align-items:center;
+    font-family:var(--f-num);font-weight:800;font-size:26px;color:#E0760A;align-self:flex-start;margin-top:6px}
+  .cdown.lt .cd-seg.sep{color:#fff;text-shadow:var(--tsh)}
+  .cd-seg:not(.sep){min-width:74px}
 
   /* ===== sticky cta ===== */
   .stick{position:fixed;left:50%;z-index:80;width:calc(100% - 20px);max-width:474px;
@@ -462,9 +466,8 @@
         <div class="cdown lt">
           <div class="cd-lbl">＼ <span class="lim">このページ限定・期間限定</span> ／ 締切まで</div>
           <div class="cd-clock">
-            <div class="cd-seg"><span class="n cd-d">--</span><span class="u">日</span></div>
-            <div class="cd-seg"><span class="n cd-h">--</span><span class="u">時間</span></div>
             <div class="cd-seg"><span class="n cd-m">--</span><span class="u">分</span></div>
+            <div class="cd-seg sep">:</div>
             <div class="cd-seg"><span class="n cd-s">--</span><span class="u">秒</span></div>
           </div>
           <div class="cd-end">このページ限定クーポンの受付は終了しました</div>
@@ -664,9 +667,8 @@
         <div class="cdown lt">
           <div class="cd-lbl">＼ <span class="lim">このページ限定・期間限定</span> ／ 締切まで</div>
           <div class="cd-clock">
-            <div class="cd-seg"><span class="n cd-d">--</span><span class="u">日</span></div>
-            <div class="cd-seg"><span class="n cd-h">--</span><span class="u">時間</span></div>
             <div class="cd-seg"><span class="n cd-m">--</span><span class="u">分</span></div>
+            <div class="cd-seg sep">:</div>
             <div class="cd-seg"><span class="n cd-s">--</span><span class="u">秒</span></div>
           </div>
           <div class="cd-end">このページ限定クーポンの受付は終了しました</div>
@@ -753,9 +755,8 @@
       <div class="cdown" style="margin-top:18px">
         <div class="cd-lbl">クーポン締切まで <span class="lim">（期間限定）</span></div>
         <div class="cd-clock">
-          <div class="cd-seg"><span class="n cd-d">--</span><span class="u">日</span></div>
-          <div class="cd-seg"><span class="n cd-h">--</span><span class="u">時間</span></div>
           <div class="cd-seg"><span class="n cd-m">--</span><span class="u">分</span></div>
+          <div class="cd-seg sep">:</div>
           <div class="cd-seg"><span class="n cd-s">--</span><span class="u">秒</span></div>
         </div>
         <div class="cd-end">このページ限定クーポンの受付は終了しました</div>
@@ -807,9 +808,8 @@
         <div class="cdown lt">
           <div class="cd-lbl">＼ <span class="lim">このページ限定・期間限定</span> ／ 締切まで</div>
           <div class="cd-clock">
-            <div class="cd-seg"><span class="n cd-d">--</span><span class="u">日</span></div>
-            <div class="cd-seg"><span class="n cd-h">--</span><span class="u">時間</span></div>
             <div class="cd-seg"><span class="n cd-m">--</span><span class="u">分</span></div>
+            <div class="cd-seg sep">:</div>
             <div class="cd-seg"><span class="n cd-s">--</span><span class="u">秒</span></div>
           </div>
           <div class="cd-end">このページ限定クーポンの受付は終了しました</div>
@@ -865,21 +865,27 @@
     });
   });
 
-  /* クーポン カウントダウン（固定締切。来訪ごとのリセットはしない） */
+  /* クーポン カウントダウン（来訪者が開いてからN分。同一セッション内のリロードは継続／新規セッションで再付与） */
   (function(){
-    const raw=window.LP_CONFIG&&window.LP_CONFIG.COUPON_DEADLINE;
-    const dl=raw?new Date(raw).getTime():0;
+    const mins=(window.LP_CONFIG&&window.LP_CONFIG.COUPON_MINUTES)||10;
     const blocks=document.querySelectorAll('.cdown');
-    if(!dl||!blocks.length)return;
+    if(!blocks.length)return;
+    const KEY='rp_cd_dl';
+    let dl;
+    try{
+      const v=sessionStorage.getItem(KEY);
+      if(v&&(+v)>Date.now()){dl=+v;}
+      else{dl=Date.now()+mins*60000;sessionStorage.setItem(KEY,String(dl));}
+    }catch(e){dl=Date.now()+mins*60000;}
     const pad=(n)=>(n<10?'0':'')+n;
     let timer;
     function tick(){
       const diff=dl-Date.now();
       if(diff<=0){blocks.forEach(b=>b.classList.add('ended'));if(timer)clearInterval(timer);return;}
-      const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
+      const m=Math.floor(diff/60000),s=Math.floor(diff/1000)%60;
       blocks.forEach((b)=>{
-        const qd=b.querySelector('.cd-d'),qh=b.querySelector('.cd-h'),qm=b.querySelector('.cd-m'),qs=b.querySelector('.cd-s');
-        if(qd)qd.textContent=d;if(qh)qh.textContent=pad(h);if(qm)qm.textContent=pad(m);if(qs)qs.textContent=pad(s);
+        const qm=b.querySelector('.cd-m'),qs=b.querySelector('.cd-s');
+        if(qm)qm.textContent=pad(m);if(qs)qs.textContent=pad(s);
       });
     }
     tick();timer=setInterval(tick,1000);
