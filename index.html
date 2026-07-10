@@ -125,11 +125,13 @@
   @keyframes sheen{0%,70%{left:-55%}86%,100%{left:135%}}
   .cta .arw{flex:none;position:relative;z-index:1;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--orange-deep);
     display:flex;align-items:center;justify-content:center;font-family:var(--f-head);font-weight:900;font-size:22px;box-shadow:0 5px 12px rgba(120,58,2,.30)}
-  /* 控えめ版（ヒーロー用）: デザインは通常CTAのまま、サイズだけ小さく */
-  .cta.calm{padding:10px 16px;gap:10px;box-shadow:0 12px 26px rgba(217,112,10,.36),0 3px 9px rgba(217,112,10,.26),inset 0 1.5px 0 rgba(255,255,255,.55)}
-  .cta.calm .cta-main{font-size:14px}
-  .cta.calm .cta-main .pr{font-size:20px}
-  .cta.calm .arw{width:36px;height:36px;font-size:17px}
+  /* 控えめ版（ヒーロー用）: デザインは通常CTAのまま、約1/2サイズ */
+  .cta.calm{max-width:250px;margin-left:auto;margin-right:auto;padding:8px 8px 8px 16px;gap:8px;
+    box-shadow:0 10px 22px rgba(217,112,10,.34),0 3px 8px rgba(217,112,10,.24),inset 0 1.5px 0 rgba(255,255,255,.55)}
+  .cta.calm .cta-main{font-size:12px}
+  .cta.calm .cta-main .pr{font-size:16px}
+  .cta.calm .cta-main small{font-size:9px}
+  .cta.calm .arw{width:26px;height:26px;font-size:13px}
   .cta-note{font-size:11px;color:var(--ink-soft);margin-top:11px;letter-spacing:.03em}
   .on .cta-note{color:rgba(255,255,255,.85)}
 
