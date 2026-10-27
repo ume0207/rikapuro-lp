@@ -41,7 +41,7 @@
     --orange-bright:#FF9D1C;
     --yellow:#FFC53D;
     --ink:#3A2A18;
-    --ink-soft:#8E7A60;
+    --ink-soft:#6B5640;
     --white:#FFFFFF;
     --cream:#FFFDF8;
     --wash:#FFF4E1;
@@ -72,11 +72,11 @@
   .fx{position:relative;background-size:cover;background-position:center;overflow:hidden}
   .fx::before{content:"";position:absolute;inset:0;z-index:0;pointer-events:none}
   .fx-in{position:relative;z-index:1;padding:48px 24px}
-  .sc-btm::before{background:linear-gradient(180deg,rgba(90,45,8,0) 0%,rgba(90,45,8,.04) 30%,rgba(90,45,8,.34) 72%,rgba(80,40,6,.58) 100%)}
-  .sc-full::before{background:linear-gradient(180deg,rgba(90,45,8,.26) 0%,rgba(90,45,8,.16) 38%,rgba(80,40,6,.50) 100%)}
-  .sc-heavy::before{background:linear-gradient(180deg,rgba(90,45,8,.38) 0%,rgba(90,45,8,.32) 35%,rgba(80,40,6,.50) 100%);
+  .sc-btm::before{background:linear-gradient(180deg,rgba(90,45,8,0) 0%,rgba(90,45,8,.10) 30%,rgba(70,35,5,.54) 58%,rgba(60,30,4,.76) 100%)}
+  .sc-full::before{background:linear-gradient(180deg,rgba(70,35,5,.50) 0%,rgba(70,35,5,.44) 38%,rgba(60,30,4,.68) 100%)}
+  .sc-heavy::before{background:linear-gradient(180deg,rgba(70,35,5,.58) 0%,rgba(70,35,5,.52) 35%,rgba(60,30,4,.68) 100%);
     backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
-  .sc-orange::before{background:linear-gradient(180deg,rgba(120,60,8,.26) 0%,rgba(120,60,8,.38) 50%,rgba(100,48,6,.56) 100%);
+  .sc-orange::before{background:linear-gradient(180deg,rgba(90,45,5,.52) 0%,rgba(90,45,5,.56) 50%,rgba(70,35,4,.70) 100%);
     backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
 
   /* ===== type ===== */
@@ -136,7 +136,7 @@
   .on .cta-note{color:rgba(255,255,255,.85)}
 
   /* ===== offer bar ===== */
-  .offer{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#F58A07,#FF9D1C);color:#fff;
+  .offer{position:sticky;top:0;z-index:60;background:linear-gradient(90deg,#DE7404,#EE8509);color:#fff;
     display:flex;align-items:center;justify-content:center;gap:9px;padding:8px 14px;font-weight:700;
     font-size:11.5px;letter-spacing:.04em;white-space:nowrap;box-shadow:0 2px 12px rgba(217,112,10,.3)}
   .offer .b{font-family:var(--f-num);font-weight:800;font-size:16px;letter-spacing:.01em}
@@ -144,8 +144,8 @@
 
   /* ===== HERO (別フォント = 明朝) ===== */
   .hero{min-height:96vh;display:flex;flex-direction:column;justify-content:space-between;background-color:#EAD9C0}
-  .hero::before{background:linear-gradient(180deg,rgba(90,45,8,.24) 0%,rgba(90,45,8,.08) 24%,
-    rgba(90,45,8,.04) 42%,rgba(90,45,8,.26) 58%,rgba(80,40,6,.36) 80%,rgba(70,34,4,.56) 100%)}
+  .hero::before{background:linear-gradient(180deg,rgba(90,45,8,.30) 0%,rgba(90,45,8,.12) 24%,
+    rgba(80,40,6,.16) 42%,rgba(70,35,5,.42) 56%,rgba(70,35,5,.48) 80%,rgba(60,30,4,.64) 100%)}
   .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
   .hero-catch{position:relative;z-index:1;text-align:center;padding:80px 20px 0}
   .hero .top .kicker{color:var(--yellow)}.hero .top .kicker::after{background:var(--yellow);margin-left:auto;margin-right:auto}
@@ -154,16 +154,16 @@
     letter-spacing:.01em;text-shadow:0 3px 22px rgba(36,16,1,.62);white-space:nowrap}
   .hero h1 .o{color:var(--yellow)}
   .hero .cta-lead{padding:5px 0;background:linear-gradient(90deg,rgba(70,34,4,0),rgba(70,34,4,.46) 18%,rgba(70,34,4,.46) 82%,rgba(70,34,4,0))}
-  .hero .formula{margin:0 -26px 12px;padding:7px 0;white-space:nowrap;background:linear-gradient(90deg,rgba(70,34,4,0),rgba(70,34,4,.5) 18%,rgba(70,34,4,.5) 82%,rgba(70,34,4,0))}
+  .hero .formula{margin:0 -26px 0;padding:8px 0 4px;white-space:nowrap;background:linear-gradient(90deg,rgba(60,30,4,0),rgba(60,30,4,.72) 14%,rgba(60,30,4,.72) 86%,rgba(60,30,4,0))}
   .hero .formula .t{font-family:var(--f-hero);font-weight:800;font-size:clamp(13px,3.6vw,17px);color:var(--yellow);
     letter-spacing:.01em;text-shadow:0 1px 2px rgba(60,28,2,.7),0 2px 16px rgba(36,16,1,.65)}
   .hero .formula .x{font-family:var(--f-serif);font-style:italic;font-size:clamp(11px,3vw,15px);color:rgba(255,255,255,.92);
     margin:0 4px;text-shadow:var(--tsh)}
-  .hero .sub{font-size:12.5px;color:rgba(255,255,255,.92);line-height:1.8;margin-bottom:24px;text-shadow:var(--tsh)}
+  .hero .sub{font-size:12.5px;color:#fff;line-height:1.8;margin:0 -26px 22px;padding:2px 26px 8px;text-shadow:var(--tsh);background:linear-gradient(90deg,rgba(60,30,4,0),rgba(60,30,4,.72) 14%,rgba(60,30,4,.72) 86%,rgba(60,30,4,0))}
   .hero-points{display:flex;justify-content:center;gap:17px;margin:-14px -20px 10px}
   .hpt{width:96px;aspect-ratio:1/1;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
     border:1px solid rgba(255,197,61,.85);flex:none;
-    background:radial-gradient(circle at 50% 30%,rgba(245,138,7,.42),rgba(90,45,8,.36));
+    background:radial-gradient(circle at 50% 30%,rgba(215,110,5,.50),rgba(60,30,4,.62));
     -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
     box-shadow:0 8px 20px rgba(20,10,0,.35),inset 0 0 0 3px rgba(255,255,255,.06)}
   .hpt b{font-family:var(--f-head);font-weight:900;font-size:10.5px;color:rgba(255,255,255,.94);line-height:1.3;
@@ -188,7 +188,7 @@
   /* こんな方におすすめ */
   .fx.reco{min-height:auto}
   .fx.reco .fx-in{padding-top:40px}
-  .fx.reco::before{background:linear-gradient(180deg,rgba(90,45,8,.34) 0%,rgba(90,45,8,.26) 38%,rgba(80,40,6,.54) 100%)}
+  .fx.reco:not(.ltx)::before{background:linear-gradient(180deg,rgba(70,35,5,.52) 0%,rgba(70,35,5,.46) 38%,rgba(60,30,4,.68) 100%)}
   .reco-list{margin-top:18px}
   .reco-list li{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.24);
     list-style:none;font-family:var(--f-head);font-weight:700;font-size:14px;color:#fff;line-height:1.55;text-shadow:var(--tsh)}
@@ -292,7 +292,7 @@
   .site{background:var(--wash);color:var(--ink-soft);text-align:center;padding:32px 26px 116px;font-size:10.5px;line-height:1.85}
   .site .bd{font-family:var(--f-display);font-size:19px;letter-spacing:.13em;color:var(--orange-deep);margin-bottom:5px}
   .site a{color:var(--orange-deep);text-decoration:none;font-weight:700}
-  .site .disc{margin-top:14px;font-size:9.5px;color:#B6A488;line-height:1.75}
+  .site .disc{margin-top:14px;font-size:9.5px;color:#7E6A50;line-height:1.75}
   .ig-btn,.site a.ig-btn{display:inline-flex;align-items:center;gap:9px;margin-top:16px;padding:12px 22px;border-radius:999px;
     background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF);color:#fff;text-decoration:none;
     font-family:var(--f-head);font-weight:900;font-size:13px;letter-spacing:.03em;
@@ -425,6 +425,25 @@
   .glu-close b{color:var(--yellow)}
   .gnote{margin-top:20px;font-size:10px;color:rgba(255,255,255,.8);line-height:1.7;text-align:center;text-shadow:var(--tsh)}
 
+  /* 明るい画像のセクション用: クリーム地＋濃い文字（白文字が沈まないように） */
+  .sc-cream::before{background:linear-gradient(180deg,rgba(255,251,244,.64) 0%,rgba(255,246,232,.76) 100%)}
+  .sc-cream-btm::before{background:linear-gradient(180deg,rgba(255,251,244,0) 0%,rgba(255,251,244,.10) 24%,rgba(255,250,242,.70) 44%,rgba(255,246,232,.80) 100%)}
+  .ltx .cap-en{color:var(--orange-deep);text-shadow:none}
+  .ltx .kicker{color:var(--orange-deep)}.ltx .kicker::after{background:var(--orange)}
+  .ltx h3,.ltx h2.h{color:var(--ink);text-shadow:none}
+  .ltx h3 .o,.ltx h2.h .o{color:var(--orange-deep)}
+  .ltx .desc,.ltx .gintro,.ltx .glu-sub,.ltx .glu-close,.ltx .glu-box p,.ltx .reco-list li{color:var(--ink);text-shadow:none}
+  .ltx .glu-work .gt{color:var(--ink);text-shadow:none}
+  .ltx .desc b,.ltx .gintro b,.ltx .glu-close b,.ltx .glu-box p b,.ltx .reco-list li b,.ltx .glu-work .gt b{color:var(--orange-deep)}
+  .ltx .glu-work .gn{color:var(--orange-deep);text-shadow:none}
+  .ltx .glu-work{border-top-color:rgba(58,42,24,.14)}
+  .ltx .glu-sub::before{background:var(--orange)}
+  .ltx .glu-box{background:rgba(255,255,255,.7);border-left-color:var(--orange)}
+  .ltx .glu-box .lbl{color:var(--orange-deep)}
+  .ltx .gnote{color:var(--ink-soft);text-shadow:none}
+  .ltx .reco-list li{border-top-color:rgba(58,42,24,.14)}.ltx .reco-list li:last-child{border-bottom-color:rgba(58,42,24,.14)}
+  .ltx .facts span{color:var(--ink);text-shadow:none;background:rgba(255,255,255,.72);border-color:rgba(245,138,7,.6)}
+
   /* reveal */
   .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .rv.in{opacity:1;transform:none}
@@ -446,7 +465,7 @@
   </div>
 
   <!-- ===== HERO ===== -->
-  <header class="fx hero" style="background-image:url('product-splash.jpg')">
+  <header class="fx hero" style="background-image:url('product-turf-v.jpg')">
     <div class="top"><span class="kicker">Recovery&nbsp;Pro</span></div>
     <div class="hero-catch">
       <h1>運動中や寝る前の<br><span class="o">リカバリー強化に◎</span></h1>
@@ -471,7 +490,7 @@
   </header>
 
   <!-- ===== こんな方におすすめ ===== -->
-  <section class="fx shot reco sc-full" style="background-image:url('gen-reco.png');background-position:center 34%">
+  <section class="fx shot reco ltx sc-cream" style="background-image:url('gen-reco.png');background-position:center 34%">
     <div class="fx-in rv">
       <div class="cap-en">Who is it for?</div>
       <h3>こんな方に、<span class="o">おすすめ。</span></h3>
@@ -524,7 +543,7 @@
   </section>
 
   <!-- ===== PROBLEM (説明 over image) ===== -->
-  <section class="fx shot sc-btm" style="background-image:url('team-lt.jpg');background-position:center 16%">
+  <section class="fx shot sc-btm" style="background-image:url('team-v.jpg');background-position:center 16%">
     <div class="fx-in rv">
       <div class="cap-en">Enough fuel?</div>
       <h3>がんばった日の栄養、<br><span class="o">足りていますか。</span></h3>
@@ -533,7 +552,7 @@
   </section>
 
   <!-- ===== 教育: なぜ使ったら補うなのか ===== -->
-  <section class="fx shot sc-heavy" style="background-image:url('players-drink-lt.jpg');background-position:center 22%">
+  <section class="fx shot sc-heavy" style="background-image:url('players-drink-v.jpg');background-position:center 22%">
     <div class="fx-in rv">
       <div class="cap-en">Why refuel?</div>
       <h3>なぜ、<span class="o">“使ったら補う”</span>なのか。</h3>
@@ -575,7 +594,7 @@
   </section>
 
   <!-- ===== 成分教育1: クエン酸 ===== -->
-  <section class="fx shot sc-full" style="background-image:url('gen-hero-supplement.png');background-position:center 30%">
+  <section class="fx shot ltx sc-cream-btm" style="background-image:url('gen-hero-supplement.png');background-position:center 30%">
     <div class="fx-in rv">
       <div class="cap-en">Citric Acid</div>
       <h3>クエン酸<span class="o">4,200mg</span>は、<br>レモン約1個分。</h3>
@@ -586,7 +605,7 @@
   </section>
 
   <!-- ===== 成分教育2: L-グルタミン ===== -->
-  <section class="fx shot sc-full" style="background-image:url('player-shaker-lt.jpg');background-position:center 18%">
+  <section class="fx shot sc-full" style="background-image:url('player-shaker-v.jpg');background-position:center 18%">
     <div class="fx-in rv">
       <div class="cap-en">L-Glutamine</div>
       <h3>体にいちばん多いアミノ酸、<br><span class="o">グルタミン。</span></h3>
@@ -597,7 +616,7 @@
   </section>
 
   <!-- ===== グルタミン解説（Instagram由来） ===== -->
-  <section class="fx glu sc-heavy" style="background-image:url('gen-hero-supplement.png');background-position:center 26%">
+  <section class="fx glu ltx sc-cream" style="background-image:url('gen-hero-supplement.png');background-position:center 26%">
    <div class="fx-in" style="padding-top:40px;padding-bottom:40px">
     <div class="cen rv">
       <span class="kicker cen">About Glutamine</span>
@@ -627,7 +646,7 @@
   </section>
 
   <!-- ===== 成分教育3: 支える材料 ===== -->
-  <section class="fx shot sc-heavy" style="background-image:url('product-turf-lt.jpg');background-position:center 72%">
+  <section class="fx shot sc-heavy" style="background-image:url('product-turf-v.jpg');background-position:center 72%">
     <div class="fx-in rv">
       <div class="cap-en">And more</div>
       <h3>支える材料も、<span class="o">この一袋に。</span></h3>
@@ -680,7 +699,7 @@
   </section>
 
   <!-- ===== TARGET（説明 over image）===== -->
-  <section class="fx shot sc-btm" style="background-image:url('celebrate-wo-lt.jpg');background-position:center 26%">
+  <section class="fx shot sc-btm" style="background-image:url('celebrate-wo-v.jpg');background-position:center 26%">
     <div class="fx-in rv">
       <div class="cap-en">Keep moving</div>
       <h3>動き続ける人の、<span class="o">隣に。</span></h3>
@@ -757,7 +776,7 @@
   </section>
 
   <!-- ===== FOOTER CTA ===== -->
-  <section class="fx foot sc-orange" style="background-image:url('product-splash.jpg');background-position:center 60%">
+  <section class="fx foot sc-orange" style="background-image:url('product-turf-v.jpg');background-position:center 60%">
     <div class="fx-in rv on" style="padding-top:80px;padding-bottom:54px">
       <span class="eyebrow">Recovery Pro</span>
       <h2 class="h">動いた日も、休む日も。<br><span class="o">補給は、一杯から。</span></h2>
