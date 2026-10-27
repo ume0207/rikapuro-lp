@@ -74,7 +74,7 @@
   .fx-in{position:relative;z-index:1;padding:48px 24px}
   .sc-btm::before{background:linear-gradient(180deg,rgba(90,45,8,0) 0%,rgba(90,45,8,.04) 30%,rgba(90,45,8,.34) 72%,rgba(80,40,6,.58) 100%)}
   .sc-full::before{background:linear-gradient(180deg,rgba(90,45,8,.26) 0%,rgba(90,45,8,.16) 38%,rgba(80,40,6,.50) 100%)}
-  .sc-heavy::before{background:linear-gradient(180deg,rgba(90,45,8,.44) 0%,rgba(90,45,8,.38) 35%,rgba(80,40,6,.56) 100%);
+  .sc-heavy::before{background:linear-gradient(180deg,rgba(90,45,8,.38) 0%,rgba(90,45,8,.32) 35%,rgba(80,40,6,.50) 100%);
     backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)}
   .sc-orange::before{background:linear-gradient(180deg,rgba(120,60,8,.26) 0%,rgba(120,60,8,.38) 50%,rgba(100,48,6,.56) 100%);
     backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px)}
@@ -144,7 +144,7 @@
 
   /* ===== HERO (別フォント = 明朝) ===== */
   .hero{min-height:96vh;display:flex;flex-direction:column;justify-content:space-between;background-color:#EAD9C0}
-  .hero::before{background:linear-gradient(180deg,rgba(90,45,8,.30) 0%,rgba(90,45,8,.12) 24%,
+  .hero::before{background:linear-gradient(180deg,rgba(90,45,8,.24) 0%,rgba(90,45,8,.08) 24%,
     rgba(90,45,8,.04) 42%,rgba(90,45,8,.26) 58%,rgba(80,40,6,.36) 80%,rgba(70,34,4,.56) 100%)}
   .hero .top{position:absolute;top:26px;left:0;right:0;z-index:2;text-align:center}
   .hero-catch{position:relative;z-index:1;text-align:center;padding:80px 20px 0}
@@ -153,6 +153,7 @@
   .hero h1{font-family:var(--f-hero);font-weight:800;color:#fff;font-size:clamp(26px,7.6vw,35px);line-height:1.58;
     letter-spacing:.01em;text-shadow:0 3px 22px rgba(36,16,1,.62);white-space:nowrap}
   .hero h1 .o{color:var(--yellow)}
+  .hero .cta-lead{padding:5px 0;background:linear-gradient(90deg,rgba(70,34,4,0),rgba(70,34,4,.46) 18%,rgba(70,34,4,.46) 82%,rgba(70,34,4,0))}
   .hero .formula{margin:0 -26px 12px;padding:7px 0;white-space:nowrap;background:linear-gradient(90deg,rgba(70,34,4,0),rgba(70,34,4,.5) 18%,rgba(70,34,4,.5) 82%,rgba(70,34,4,0))}
   .hero .formula .t{font-family:var(--f-hero);font-weight:800;font-size:clamp(13px,3.6vw,17px);color:var(--yellow);
     letter-spacing:.01em;text-shadow:0 1px 2px rgba(60,28,2,.7),0 2px 16px rgba(36,16,1,.65)}
@@ -445,7 +446,7 @@
   </div>
 
   <!-- ===== HERO ===== -->
-  <header class="fx hero" style="background-image:url('product-turf.png')">
+  <header class="fx hero" style="background-image:url('product-splash.jpg')">
     <div class="top"><span class="kicker">Recovery&nbsp;Pro</span></div>
     <div class="hero-catch">
       <h1>運動中や寝る前の<br><span class="o">リカバリー強化に◎</span></h1>
@@ -523,7 +524,7 @@
   </section>
 
   <!-- ===== PROBLEM (説明 over image) ===== -->
-  <section class="fx shot sc-btm" style="background-image:url('team.png');background-position:center 16%">
+  <section class="fx shot sc-btm" style="background-image:url('team-lt.jpg');background-position:center 16%">
     <div class="fx-in rv">
       <div class="cap-en">Enough fuel?</div>
       <h3>がんばった日の栄養、<br><span class="o">足りていますか。</span></h3>
@@ -532,7 +533,7 @@
   </section>
 
   <!-- ===== 教育: なぜ使ったら補うなのか ===== -->
-  <section class="fx shot sc-heavy" style="background-image:url('players-drink.png');background-position:center 22%">
+  <section class="fx shot sc-heavy" style="background-image:url('players-drink-lt.jpg');background-position:center 22%">
     <div class="fx-in rv">
       <div class="cap-en">Why refuel?</div>
       <h3>なぜ、<span class="o">“使ったら補う”</span>なのか。</h3>
@@ -585,7 +586,7 @@
   </section>
 
   <!-- ===== 成分教育2: L-グルタミン ===== -->
-  <section class="fx shot sc-full" style="background-image:url('player-shaker.png');background-position:center 18%">
+  <section class="fx shot sc-full" style="background-image:url('player-shaker-lt.jpg');background-position:center 18%">
     <div class="fx-in rv">
       <div class="cap-en">L-Glutamine</div>
       <h3>体にいちばん多いアミノ酸、<br><span class="o">グルタミン。</span></h3>
@@ -626,7 +627,7 @@
   </section>
 
   <!-- ===== 成分教育3: 支える材料 ===== -->
-  <section class="fx shot sc-heavy" style="background-image:url('product-turf.png');background-position:center 72%">
+  <section class="fx shot sc-heavy" style="background-image:url('product-turf-lt.jpg');background-position:center 72%">
     <div class="fx-in rv">
       <div class="cap-en">And more</div>
       <h3>支える材料も、<span class="o">この一袋に。</span></h3>
@@ -679,7 +680,7 @@
   </section>
 
   <!-- ===== TARGET（説明 over image）===== -->
-  <section class="fx shot sc-btm" style="background-image:url('celebrate-wo.png');background-position:center 26%">
+  <section class="fx shot sc-btm" style="background-image:url('celebrate-wo-lt.jpg');background-position:center 26%">
     <div class="fx-in rv">
       <div class="cap-en">Keep moving</div>
       <h3>動き続ける人の、<span class="o">隣に。</span></h3>
@@ -756,7 +757,7 @@
   </section>
 
   <!-- ===== FOOTER CTA ===== -->
-  <section class="fx foot sc-orange" style="background-image:url('product-turf.png');background-position:center 60%">
+  <section class="fx foot sc-orange" style="background-image:url('product-splash.jpg');background-position:center 60%">
     <div class="fx-in rv on" style="padding-top:80px;padding-bottom:54px">
       <span class="eyebrow">Recovery Pro</span>
       <h2 class="h">動いた日も、休む日も。<br><span class="o">補給は、一杯から。</span></h2>
